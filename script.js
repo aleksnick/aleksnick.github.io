@@ -58,6 +58,33 @@
     revealElements.forEach((element) => element.classList.add("is-visible"));
   }
 
+  document.querySelectorAll(".video-trigger").forEach((trigger) => {
+    trigger.addEventListener("click", (event) => {
+      const videoId = trigger.dataset.videoId;
+      const thumbnail = trigger.closest(".talk-thumb");
+
+      if (!videoId || !thumbnail || !/^[\w-]{11}$/.test(videoId)) return;
+
+      event.preventDefault();
+
+      const player = document.createElement("iframe");
+      const parameters = new URLSearchParams({ autoplay: "1", playsinline: "1", hl: "ru" });
+
+      player.className = "talk-player";
+      player.src = `https://www.youtube-nocookie.com/embed/${videoId}?${parameters}`;
+      player.title = trigger.dataset.videoTitle || "YouTube video player";
+      player.allow =
+        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      player.referrerPolicy = "strict-origin-when-cross-origin";
+      player.allowFullscreen = true;
+      player.addEventListener("load", () => player.focus(), { once: true });
+
+      thumbnail.classList.add("is-playing");
+      trigger.closest(".talk-card")?.classList.add("is-playing");
+      thumbnail.replaceChildren(player);
+    });
+  });
+
   if (!prefersReducedMotion && window.matchMedia("(pointer: fine)").matches) {
     document.querySelectorAll(".project-card").forEach((card) => {
       card.addEventListener("pointermove", (event) => {

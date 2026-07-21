@@ -1157,15 +1157,20 @@ a {
     border-color 260ms ease;
 }
 
-.talk-card:hover,
-.talk-card:focus-visible {
+.talk-card:not(.is-playing):hover,
+.talk-card:not(.is-playing):focus-within {
   transform: translateY(-8px);
   border-color: var(--lime);
+}
+
+.talk-card.is-playing {
+  border-color: rgba(200, 255, 61, 0.55);
 }
 
 .talk-thumb {
   position: relative;
   overflow: hidden;
+  min-height: 200px;
   aspect-ratio: 16 / 9;
 }
 
@@ -1174,6 +1179,11 @@ a {
   inset: 0;
   background: linear-gradient(135deg, rgba(7, 8, 10, 0.08), rgba(7, 8, 10, 0.58));
   content: "";
+  pointer-events: none;
+}
+
+.talk-thumb.is-playing::after {
+  display: none;
 }
 
 .talk-thumb img {
@@ -1189,6 +1199,18 @@ a {
 .talk-card:hover img {
   transform: scale(1.04);
   filter: grayscale(0) contrast(1.04);
+}
+
+.video-trigger {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: block;
+}
+
+.video-trigger:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: -4px;
 }
 
 .play {
@@ -1219,13 +1241,24 @@ a {
   border-left: 11px solid #fff;
 }
 
-.talk-card:hover .play {
+.talk-card:hover .play,
+.video-trigger:focus-visible .play {
   transform: translate(-50%, -50%) scale(1.08);
   background: var(--lime);
 }
 
-.talk-card:hover .play i {
+.talk-card:hover .play i,
+.video-trigger:focus-visible .play i {
   border-left-color: #07080a;
+}
+
+.talk-player {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 .talk-copy {
@@ -1244,6 +1277,16 @@ a {
   color: var(--muted);
   font-size: 13px;
   line-height: 1.65;
+}
+
+.talk-external {
+  color: var(--muted);
+  transition: color 180ms ease;
+}
+
+.talk-external:hover,
+.talk-external:focus-visible {
+  color: var(--lime);
 }
 
 .contact {
