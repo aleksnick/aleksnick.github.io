@@ -4,21 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#07080a" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="application-name" content="Алексей Николаев" />
     <meta
       name="description"
-      content="Алексей Николаев — Frontend Team Lead, product engineer и автор TradeJS, Selfchecks, Selflify и Noiso. Проекты, инженерный подход и выступления."
+      content="Алексей Николаев — Frontend Team Lead и Product Engineer. TradeJS, Selfchecks, Selflify, Noiso, frontend-архитектура, инженерный подход и выступления."
     />
     <meta name="author" content="Алексей Николаев" />
-    <meta name="robots" content="index,follow" />
-    <meta property="og:type" content="website" />
+    <meta
+      name="robots"
+      content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
+    />
+    <meta
+      name="googlebot"
+      content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
+    />
+    <meta property="og:type" content="profile" />
     <meta property="og:locale" content="ru_RU" />
+    <meta property="og:site_name" content="Алексей Николаев" />
     <meta property="og:title" content="Алексей Николаев — проекты вместо резюме" />
     <meta
       property="og:description"
-      content="Строю продукты, собираю сложные системы и делюсь тем, что сработало."
+      content="Строю продукты, собираю системы и делаю сложное ясным. TradeJS, Selfchecks, Selflify и Noiso."
     />
     <meta property="og:url" content="https://aleksnick.github.io/" />
+    <meta property="og:image" content="https://aleksnick.github.io/og-card.png" />
+    <meta property="og:image:secure_url" content="https://aleksnick.github.io/og-card.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Алексей Николаев — проекты вместо резюме"
+    />
+    <meta property="profile:first_name" content="Алексей" />
+    <meta property="profile:last_name" content="Николаев" />
+    <meta property="profile:username" content="aleksnick" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Алексей Николаев — проекты вместо резюме" />
+    <meta
+      name="twitter:description"
+      content="TradeJS, Selfchecks, Selflify и Noiso. Продуктовый взгляд, frontend-архитектура и инженерная прагматика."
+    />
+    <meta name="twitter:image" content="https://aleksnick.github.io/og-card.png" />
+    <meta
+      name="twitter:image:alt"
+      content="Алексей Николаев — проекты вместо резюме"
+    />
     <link rel="canonical" href="https://aleksnick.github.io/" />
+    <link rel="alternate" hreflang="ru" href="https://aleksnick.github.io/" />
+    <link rel="alternate" hreflang="x-default" href="https://aleksnick.github.io/" />
+    <link
+      rel="alternate"
+      type="text/plain"
+      href="https://aleksnick.github.io/llms.txt"
+      title="LLM-ready profile"
+    />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,28 +73,185 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Алексей Николаев",
-        "alternateName": "aleksnick",
-        "url": "https://aleksnick.github.io/",
-        "jobTitle": "Frontend Team Lead",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Sendsay"
-        },
-        "sameAs": [
-          "https://github.com/aleksnick",
-          "https://www.linkedin.com/in/aleksnick",
-          "https://career.habr.com/aleksnick",
-          "https://t.me/aleksnick"
-        ],
-        "knowsAbout": [
-          "Frontend architecture",
-          "TypeScript",
-          "React",
-          "Developer tools",
-          "Self-hosted systems",
-          "Product engineering"
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://aleksnick.github.io/#person",
+            "name": "Алексей Николаев",
+            "givenName": "Алексей",
+            "familyName": "Николаев",
+            "alternateName": "aleksnick",
+            "url": "https://aleksnick.github.io/",
+            "description": "Frontend Team Lead и Product Engineer с опытом создания frontend-платформ, developer tools, self-hosted систем и собственных продуктов.",
+            "jobTitle": ["Frontend Team Lead", "Product Engineer"],
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Sendsay",
+              "url": "https://sendsay.ru/"
+            },
+            "sameAs": [
+              "https://github.com/aleksnick",
+              "https://www.linkedin.com/in/aleksnick",
+              "https://career.habr.com/aleksnick",
+              "https://t.me/aleksnick"
+            ],
+            "knowsAbout": [
+              "Product engineering",
+              "Frontend architecture",
+              "TypeScript",
+              "React",
+              "Developer experience",
+              "CI/CD",
+              "Self-hosted systems",
+              "Engineering leadership"
+            ],
+            "mainEntityOfPage": { "@id": "https://aleksnick.github.io/#profile" }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://aleksnick.github.io/#website",
+            "url": "https://aleksnick.github.io/",
+            "name": "Алексей Николаев — проекты вместо резюме",
+            "description": "Персональный сайт Алексея Николаева о проектах, инженерном подходе и публичных выступлениях.",
+            "inLanguage": "ru-RU",
+            "publisher": { "@id": "https://aleksnick.github.io/#person" }
+          },
+          {
+            "@type": "ProfilePage",
+            "@id": "https://aleksnick.github.io/#profile",
+            "url": "https://aleksnick.github.io/",
+            "name": "Алексей Николаев — проекты вместо резюме",
+            "description": "Профиль Product Engineer и Frontend Team Lead: проекты, компетенции и выступления.",
+            "inLanguage": "ru-RU",
+            "dateModified": "2026-07-21",
+            "isPartOf": { "@id": "https://aleksnick.github.io/#website" },
+            "mainEntity": { "@id": "https://aleksnick.github.io/#person" },
+            "about": { "@id": "https://aleksnick.github.io/#person" },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://aleksnick.github.io/og-card.png",
+              "width": 1200,
+              "height": 630,
+              "caption": "Алексей Николаев — проекты вместо резюме"
+            },
+            "hasPart": [
+              { "@id": "https://aleksnick.github.io/#projects-list" },
+              { "@id": "https://aleksnick.github.io/#talks-list" }
+            ]
+          },
+          {
+            "@type": "ItemList",
+            "@id": "https://aleksnick.github.io/#projects-list",
+            "name": "Проекты Алексея Николаева",
+            "numberOfItems": 4,
+            "itemListOrder": "https://schema.org/ItemListOrderAscending",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@type": "SoftwareSourceCode",
+                  "name": "TradeJS",
+                  "url": "https://tradejs.dev/",
+                  "description": "TypeScript-фреймворк для создания, бэктеста и запуска алгоритмических торговых стратегий.",
+                  "programmingLanguage": "TypeScript",
+                  "creator": { "@id": "https://aleksnick.github.io/#person" }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@type": "SoftwareSourceCode",
+                  "name": "Selfchecks",
+                  "url": "https://selfchecks.github.io/",
+                  "description": "Self-hosted synthetic monitoring as code для API- и browser-проверок.",
+                  "programmingLanguage": "TypeScript",
+                  "creator": { "@id": "https://aleksnick.github.io/#person" }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@type": "SoftwareSourceCode",
+                  "name": "Selflify",
+                  "url": "https://selflify.github.io/",
+                  "description": "Self-hosted preview deploys для статических SPA через GitHub Actions, SSH и rsync.",
+                  "creator": { "@id": "https://aleksnick.github.io/#person" }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "name": "Noiso",
+                  "url": "https://noiso.app/",
+                  "description": "Минималистичное iOS-приложение с офлайн-звуками и таймером сна без рекламы, подписок и регистрации.",
+                  "applicationCategory": "HealthApplication",
+                  "operatingSystem": "iOS",
+                  "author": { "@id": "https://aleksnick.github.io/#person" }
+                }
+              }
+            ]
+          },
+          {
+            "@type": "ItemList",
+            "@id": "https://aleksnick.github.io/#talks-list",
+            "name": "Публичные выступления Алексея Николаева",
+            "numberOfItems": 3,
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@type": "VideoObject",
+                  "name": "Как жить с монорепой",
+                  "description": "Архитектура, инструменты, автоматизация задач и CI/CD на реальном примере.",
+                  "url": "https://www.youtube.com/watch?v=whpEE9uotb8",
+                  "embedUrl": "https://www.youtube.com/embed/whpEE9uotb8",
+                  "thumbnailUrl": "https://i.ytimg.com/vi/whpEE9uotb8/hqdefault.jpg",
+                  "uploadDate": "2024-04-27T05:44:42-07:00",
+                  "duration": "PT47M15S",
+                  "inLanguage": "ru-RU",
+                  "author": { "@id": "https://aleksnick.github.io/#person" }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@type": "VideoObject",
+                  "name": "Фидбэк по тестовому заданию? Не, не слышал",
+                  "description": "Почему обратная связь кандидатам — часть зрелого инженерного менеджмента.",
+                  "url": "https://www.youtube.com/watch?v=fh7J93LUZLE",
+                  "embedUrl": "https://www.youtube.com/embed/fh7J93LUZLE",
+                  "thumbnailUrl": "https://i.ytimg.com/vi/fh7J93LUZLE/hqdefault.jpg",
+                  "uploadDate": "2025-08-06T09:05:52-07:00",
+                  "duration": "PT39M23S",
+                  "inLanguage": "ru-RU",
+                  "author": { "@id": "https://aleksnick.github.io/#person" }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@type": "VideoObject",
+                  "name": "Инсайды из отдела QA",
+                  "description": "Взгляд на качество и командную работу по другую сторону привычных границ.",
+                  "url": "https://www.youtube.com/watch?v=RAX4p_y67Yk",
+                  "embedUrl": "https://www.youtube.com/embed/RAX4p_y67Yk",
+                  "thumbnailUrl": "https://i.ytimg.com/vi/RAX4p_y67Yk/hqdefault.jpg",
+                  "uploadDate": "2024-04-24T00:01:14-07:00",
+                  "duration": "PT30M5S",
+                  "inLanguage": "ru-RU",
+                  "author": { "@id": "https://aleksnick.github.io/#person" }
+                }
+              }
+            ]
+          }
         ]
       }
     </script>
@@ -75,7 +273,7 @@
         <a href="#approach">Подход</a>
         <a href="#talks">Выступления</a>
       </nav>
-      <a class="header-link" href="https://github.com/aleksnick" target="_blank" rel="noreferrer">
+      <a class="header-link" href="https://github.com/aleksnick" target="_blank" rel="me noreferrer">
         GitHub <span aria-hidden="true">↗</span>
       </a>
     </header>
@@ -105,7 +303,7 @@
               class="button button-ghost"
               href="https://www.linkedin.com/in/aleksnick"
               target="_blank"
-              rel="noreferrer"
+              rel="me noreferrer"
             >
               Профиль <span aria-hidden="true">↗</span>
             </a>
@@ -418,10 +616,10 @@
           давайте познакомимся.
         </p>
         <div class="contact-links reveal" data-reveal="up">
-          <a href="https://t.me/aleksnick" target="_blank" rel="noreferrer">Telegram <span>↗</span></a>
-          <a href="https://www.linkedin.com/in/aleksnick" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
-          <a href="https://career.habr.com/aleksnick" target="_blank" rel="noreferrer">Хабр Карьера <span>↗</span></a>
-          <a href="https://github.com/aleksnick" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+          <a href="https://t.me/aleksnick" target="_blank" rel="me noreferrer">Telegram <span>↗</span></a>
+          <a href="https://www.linkedin.com/in/aleksnick" target="_blank" rel="me noreferrer">LinkedIn <span>↗</span></a>
+          <a href="https://career.habr.com/aleksnick" target="_blank" rel="me noreferrer">Хабр Карьера <span>↗</span></a>
+          <a href="https://github.com/aleksnick" target="_blank" rel="me noreferrer">GitHub <span>↗</span></a>
         </div>
       </section>
     </main>

@@ -1,0 +1,34 @@
+# Алексей Николаев
+
+> Персональный профиль Frontend Team Lead и Product Engineer. Главная тема сайта — созданные продукты, инженерные компетенции и публичные выступления, а не поиск работы.
+
+Алексей Николаев (`aleksnick`) более 15 лет работает в IT. Его основные области — product engineering, frontend-архитектура, TypeScript, developer experience, CI/CD, self-hosted системы и инженерное лидерство.
+
+## Profile
+
+- [Полный контекст для LLM](https://aleksnick.github.io/llms-full.txt): проверяемые факты, описания проектов, компетенции, выступления и контакты
+- [Персональный сайт](https://aleksnick.github.io/): канонический профиль и витрина проектов
+- [GitHub](https://github.com/aleksnick): исходный код и open-source активность
+- [LinkedIn](https://www.linkedin.com/in/aleksnick): профессиональный профиль
+- [Хабр Карьера](https://career.habr.com/aleksnick): профиль в русскоязычном IT-сообществе
+
+## Selected projects
+
+- [TradeJS](https://tradejs.dev/): TypeScript-фреймворк для создания, бэктеста и запуска алгоритмических торговых стратегий
+- [Selfchecks](https://selfchecks.github.io/): self-hosted synthetic monitoring as code для API- и browser-проверок
+- [Selflify](https://selflify.github.io/): self-hosted preview deploys для статических SPA через GitHub Actions, SSH и rsync
+- [Noiso](https://noiso.app/): минималистичное iOS-приложение с офлайн-звуками и таймером сна
+
+## Public talks
+
+- [Как жить с монорепой](https://www.youtube.com/watch?v=whpEE9uotb8): архитектура, автоматизация и CI/CD
+- [Фидбэк по тестовому заданию? Не, не слышал](https://www.youtube.com/watch?v=fh7J93LUZLE): обратная связь и инженерный менеджмент
+- [Инсайды из отдела QA](https://www.youtube.com/watch?v=RAX4p_y67Yk): качество и командная работа
+
+## Contact
+
+- [Telegram](https://t.me/aleksnick): основной прямой контакт
+
+## Optional
+
+- [Sitemap](https://aleksnick.github.io/sitemap.xml): индекс публичных страниц

@@ -4,6 +4,8 @@
 
 Статический лендинг без сборки и внешних JavaScript-зависимостей. Публикуется через GitHub Pages.
 
+SEO-слой включает расширенные Open Graph/X-метаданные, JSON-LD, sitemap, social preview и файлы `llms.txt` / `llms-full.txt` для LLM-клиентов.
+
 ## Локальный запуск
 
 ```bash

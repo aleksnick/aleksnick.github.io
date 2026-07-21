@@ -1,4 +1,8 @@
+# Public portfolio: indexing and AI-powered search discovery are welcome.
 User-agent: *
+Allow: /
+
+User-agent: OAI-SearchBot
 Allow: /
 
 Sitemap: https://aleksnick.github.io/sitemap.xml
