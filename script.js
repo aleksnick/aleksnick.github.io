@@ -2,6 +2,8 @@
   const root = document.documentElement;
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  root.classList.add("reveal-enabled");
+
   document.getElementById("year").textContent = new Date().getFullYear();
 
   const updateScrollProgress = () => {
@@ -27,6 +29,19 @@
   const revealElements = [...document.querySelectorAll(".reveal")];
 
   if ("IntersectionObserver" in window && !prefersReducedMotion) {
+    const revealGroupIndexes = new Map();
+
+    revealElements.forEach((element) => {
+      const group = element.closest(
+        ".hero-copy, .project-list, .pipeline-stages, .talk-list, .contact, section, main",
+      );
+      const index = revealGroupIndexes.get(group) || 0;
+      const delay = element.dataset.revealDelay || `${Math.min(index, 4) * 90}ms`;
+
+      element.style.setProperty("--reveal-delay", delay);
+      revealGroupIndexes.set(group, index + 1);
+    });
+
     const revealObserver = new IntersectionObserver(
       (entries, observer) => {
         entries.forEach((entry) => {
@@ -35,13 +50,10 @@
           observer.unobserve(entry.target);
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -5%" },
+      { threshold: 0.1, rootMargin: "0px 0px -7%" },
     );
 
-    revealElements.forEach((element, index) => {
-      element.style.transitionDelay = `${Math.min(index % 4, 3) * 70}ms`;
-      revealObserver.observe(element);
-    });
+    revealElements.forEach((element) => revealObserver.observe(element));
   } else {
     revealElements.forEach((element) => element.classList.add("is-visible"));
   }

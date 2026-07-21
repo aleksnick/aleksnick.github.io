@@ -28,7 +28,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <title>Алексей Николаев — проекты вместо резюме</title>
-    <noscript><style>.reveal { opacity: 1; transform: none; }</style></noscript>
+    <noscript><style>.reveal { opacity: 1; translate: none; scale: 1; filter: none; clip-path: none; }</style></noscript>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -83,21 +83,21 @@
     <main id="content">
       <section class="hero" id="top">
         <div class="hero-copy">
-          <div class="eyebrow reveal">
+          <div class="eyebrow reveal" data-reveal="fade">
             <span class="status-dot"></span>
             Алексей Николаев · Frontend Team Lead · Product Engineer
           </div>
-          <p class="anti-resume reveal">НЕ РЕЗЮМЕ / 01</p>
-          <h1 class="hero-title reveal">
+          <p class="anti-resume reveal" data-reveal="left">НЕ РЕЗЮМЕ / 01</p>
+          <h1 class="hero-title reveal" data-reveal="up">
             <span>Строю продукты.</span>
             <span>Собираю системы.</span>
             <span class="accent-line">Делаю сложное ясным.</span>
           </h1>
-          <p class="hero-lead reveal">
+          <p class="hero-lead reveal" data-reveal="up">
             15+ лет в IT. Соединяю продуктовый взгляд, frontend-архитектуру и инженерную
             прагматику — от первой гипотезы до работающего продукта.
           </p>
-          <div class="hero-actions reveal">
+          <div class="hero-actions reveal" data-reveal="up">
             <a class="button button-primary" href="#projects">
               Смотреть проекты <span aria-hidden="true">↓</span>
             </a>
@@ -112,7 +112,7 @@
           </div>
         </div>
 
-        <div class="hero-system reveal">
+        <div class="hero-system reveal" data-reveal="scale">
           <div class="system-label system-label-top">PROJECT SYSTEM / LIVE</div>
           <div class="orbit orbit-one" aria-hidden="true"></div>
           <div class="orbit orbit-two" aria-hidden="true"></div>
@@ -143,7 +143,7 @@
         </div>
       </section>
 
-      <div class="ticker" aria-hidden="true">
+      <div class="ticker reveal" data-reveal="wipe" aria-hidden="true">
         <div class="ticker-track">
           <span>TYPE­SCRIPT</span><i>✦</i><span>PRODUCT ENGINEERING</span><i>✦</i>
           <span>FRONTEND ARCHITECTURE</span><i>✦</i><span>DEV TOOLS</span><i>✦</i>
@@ -155,15 +155,15 @@
       </div>
 
       <section class="manifesto section-shell" id="manifesto">
-        <div class="section-kicker reveal">
+        <div class="section-kicker reveal" data-reveal="left">
           <span>02</span>
           <span>ЗАЧЕМ ЭТОТ САЙТ</span>
         </div>
         <div class="manifesto-grid">
-          <h2 class="display-heading reveal">
+          <h2 class="display-heading reveal" data-reveal="up">
             Опыт интересен не количеством лет.<br />Интересно, <em>что из него получилось.</em>
           </h2>
-          <div class="manifesto-copy reveal">
+          <div class="manifesto-copy reveal" data-reveal="right">
             <p>
               Поэтому здесь нет бесконечной ленты должностей. Здесь — проекты, в которых идея
               проходит весь путь: исследование, архитектура, интерфейс, инфраструктура, запуск.
@@ -174,7 +174,7 @@
       </section>
 
       <section class="projects section-shell" id="projects">
-        <div class="section-heading reveal">
+        <div class="section-heading reveal" data-reveal="up">
           <div>
             <div class="section-kicker"><span>03</span><span>SELECTED PROJECTS</span></div>
             <h2 class="display-heading">Проекты, которые<br />говорят за меня.</h2>
@@ -186,7 +186,7 @@
         </div>
 
         <div class="project-list">
-          <article class="project-card project-card-featured reveal" data-accent="lime">
+          <article class="project-card project-card-featured reveal" data-reveal="card" data-accent="lime">
             <a class="project-link" href="https://tradejs.dev" target="_blank" rel="noreferrer" aria-label="Открыть TradeJS">
               <div class="project-visual">
                 <img
@@ -212,7 +212,7 @@
             </a>
           </article>
 
-          <article class="project-card reveal" data-accent="mint">
+          <article class="project-card reveal" data-reveal="card" data-accent="mint">
             <a class="project-link" href="https://selfchecks.github.io/" target="_blank" rel="noreferrer" aria-label="Открыть Selfchecks">
               <div class="project-visual">
                 <img
@@ -238,7 +238,7 @@
             </a>
           </article>
 
-          <article class="project-card reveal" data-accent="violet">
+          <article class="project-card reveal" data-reveal="card" data-accent="violet">
             <a class="project-link" href="https://selflify.github.io/" target="_blank" rel="noreferrer" aria-label="Открыть Selflify">
               <div class="project-visual">
                 <img
@@ -264,7 +264,7 @@
             </a>
           </article>
 
-          <article class="project-card project-card-noiso reveal" data-accent="amber">
+          <article class="project-card project-card-noiso reveal" data-reveal="card" data-accent="amber">
             <a class="project-link" href="https://noiso.app" target="_blank" rel="noreferrer" aria-label="Открыть Noiso">
               <div class="project-visual">
                 <div class="noiso-orbit" aria-hidden="true"></div>
@@ -294,7 +294,7 @@
       </section>
 
       <section class="approach section-shell" id="approach">
-        <div class="section-heading reveal">
+        <div class="section-heading reveal" data-reveal="up">
           <div>
             <div class="section-kicker"><span>04</span><span>HOW I WORK</span></div>
             <h2 class="display-heading">Не только<br />frontend.</h2>
@@ -305,8 +305,8 @@
           </p>
         </div>
 
-        <div class="capability-pipeline reveal">
-          <div class="experience-panel">
+        <div class="capability-pipeline reveal" data-reveal="wipe">
+          <div class="experience-panel reveal" data-reveal="left">
             <div class="experience-readout">
               <span>15+</span>
               <strong>лет в IT</strong>
@@ -319,25 +319,25 @@
           </div>
 
           <div class="pipeline-stages">
-            <article class="capability capability-one">
+            <article class="capability capability-one reveal" data-reveal="card">
               <div class="capability-index"><span>01</span><small>DISCOVER</small></div>
               <h3>Product Engineering</h3>
               <p>Проверить гипотезу, выделить главное, довести до полезного результата.</p>
               <div class="capability-signal"><i></i><span>idea / value</span></div>
             </article>
-            <article class="capability capability-two">
+            <article class="capability capability-two reveal" data-reveal="card">
               <div class="capability-index"><span>02</span><small>DESIGN</small></div>
               <h3>Frontend Architecture</h3>
               <p>TypeScript, сложные SPA, монорепозитории и решения, которые выдерживают рост.</p>
               <div class="capability-signal"><i></i><span>structure / scale</span></div>
             </article>
-            <article class="capability capability-three">
+            <article class="capability capability-three reveal" data-reveal="card">
               <div class="capability-index"><span>03</span><small>DELIVER</small></div>
               <h3>Platforms &amp; DX</h3>
               <p>Инструменты, CI/CD и self-hosted системы, сокращающие путь от кода до сигнала.</p>
               <div class="capability-signal"><i></i><span>code / runtime</span></div>
             </article>
-            <article class="capability capability-four">
+            <article class="capability capability-four reveal" data-reveal="card">
               <div class="capability-index"><span>04</span><small>AMPLIFY</small></div>
               <h3>Leadership</h3>
               <p>Frontend Team Lead в Sendsay: контекст, архитектура, обратная связь и доставка.</p>
@@ -352,7 +352,7 @@
       </section>
 
       <section class="talks section-shell" id="talks">
-        <div class="section-heading reveal">
+        <div class="section-heading reveal" data-reveal="up">
           <div>
             <div class="section-kicker"><span>05</span><span>PUBLIC TALKS</span></div>
             <h2 class="display-heading">Разобрался —<br />расскажи другим.</h2>
@@ -364,7 +364,7 @@
         </div>
 
         <div class="talk-list">
-          <a class="talk-card reveal" href="https://www.youtube.com/watch?v=whpEE9uotb8" target="_blank" rel="noreferrer">
+          <a class="talk-card reveal" data-reveal="card" href="https://www.youtube.com/watch?v=whpEE9uotb8" target="_blank" rel="noreferrer">
             <div class="talk-thumb">
               <img src="https://i.ytimg.com/vi/whpEE9uotb8/hqdefault.jpg" alt="Превью доклада «Как жить с монорепой»" loading="lazy" />
               <span class="play"><i></i></span>
@@ -375,7 +375,7 @@
               <p>Архитектура, инструменты, автоматизация задач и CI/CD на реальном примере.</p>
             </div>
           </a>
-          <a class="talk-card reveal" href="https://www.youtube.com/watch?v=fh7J93LUZLE" target="_blank" rel="noreferrer">
+          <a class="talk-card reveal" data-reveal="card" href="https://www.youtube.com/watch?v=fh7J93LUZLE" target="_blank" rel="noreferrer">
             <div class="talk-thumb">
               <img src="https://i.ytimg.com/vi/fh7J93LUZLE/hqdefault.jpg" alt="Превью доклада о фидбэке по тестовому заданию" loading="lazy" />
               <span class="play"><i></i></span>
@@ -386,7 +386,7 @@
               <p>Почему обратная связь кандидатам — часть зрелого инженерного менеджмента.</p>
             </div>
           </a>
-          <a class="talk-card reveal" href="https://www.youtube.com/watch?v=RAX4p_y67Yk" target="_blank" rel="noreferrer">
+          <a class="talk-card reveal" data-reveal="card" href="https://www.youtube.com/watch?v=RAX4p_y67Yk" target="_blank" rel="noreferrer">
             <div class="talk-thumb">
               <img src="https://i.ytimg.com/vi/RAX4p_y67Yk/hqdefault.jpg" alt="Превью доклада «Инсайды из отдела QA»" loading="lazy" />
               <span class="play"><i></i></span>
@@ -401,7 +401,7 @@
       </section>
 
       <section class="contact section-shell" id="contact">
-        <div class="contact-wave" aria-hidden="true">
+        <div class="contact-wave reveal" data-reveal="right" aria-hidden="true">
           <div class="wave-readout"><span>SIGNAL / OPEN</span><small>CHANNEL 01</small></div>
           <div class="wave-bars">
             <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
@@ -410,14 +410,14 @@
           </div>
           <div class="wave-status"><span>IDEA</span><b>→</b><span>DIALOGUE</span></div>
         </div>
-        <div class="section-kicker reveal"><span>06</span><span>CONNECT</span></div>
-        <p class="contact-pretitle reveal">НЕ «ИЩУ РАБОТУ»</p>
-        <h2 class="reveal">Открыт сильным идеям,<br /><em>технологиям и диалогу.</em></h2>
-        <p class="contact-copy reveal">
+        <div class="section-kicker reveal" data-reveal="left"><span>06</span><span>CONNECT</span></div>
+        <p class="contact-pretitle reveal" data-reveal="up">НЕ «ИЩУ РАБОТУ»</p>
+        <h2 class="reveal" data-reveal="up">Открыт сильным идеям,<br /><em>технологиям и диалогу.</em></h2>
+        <p class="contact-copy reveal" data-reveal="up">
           Этот сайт — витрина того, что я строю и как думаю. Если вам близок такой подход —
           давайте познакомимся.
         </p>
-        <div class="contact-links reveal">
+        <div class="contact-links reveal" data-reveal="up">
           <a href="https://t.me/aleksnick" target="_blank" rel="noreferrer">Telegram <span>↗</span></a>
           <a href="https://www.linkedin.com/in/aleksnick" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a>
           <a href="https://career.habr.com/aleksnick" target="_blank" rel="noreferrer">Хабр Карьера <span>↗</span></a>
