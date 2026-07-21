@@ -722,6 +722,24 @@ a {
   min-height: 500px;
 }
 
+.project-card-noiso {
+  grid-column: span 2;
+}
+
+.project-card-noiso .project-link {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(360px, 1.18fr);
+}
+
+.project-card-noiso .project-visual {
+  min-height: 420px;
+}
+
+.project-card-noiso .project-info {
+  min-height: auto;
+  padding: 42px;
+}
+
 .project-link {
   display: block;
   height: 100%;
@@ -1551,10 +1569,14 @@ a {
   .manifesto-grid { margin-top: 34px; }
   .section-heading { margin-bottom: 44px; }
   .project-list { grid-template-columns: 1fr; }
-  .project-card-featured { grid-column: auto; }
+  .project-card-featured,
+  .project-card-noiso { grid-column: auto; }
+  .project-card-noiso .project-link { display: block; }
   .project-card-featured .project-visual,
+  .project-card-noiso .project-visual,
   .project-visual { min-height: 250px; }
   .project-card-featured .project-info,
+  .project-card-noiso .project-info,
   .project-info { min-height: 0; padding: 24px; }
   .project-info h3 { margin-top: 34px; }
   .project-description { margin-bottom: 28px; }
