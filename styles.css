@@ -1471,12 +1471,10 @@ a {
   --reveal-y: 38px;
   --reveal-scale: 0.985;
   --reveal-blur: 7px;
-  --reveal-clip: inset(0 0 0 0);
   opacity: 1;
   translate: 0;
   scale: 1;
   filter: none;
-  clip-path: inset(0);
 }
 
 .reveal-enabled .reveal:not(.is-visible) {
@@ -1484,7 +1482,6 @@ a {
   translate: var(--reveal-x) var(--reveal-y);
   scale: var(--reveal-scale);
   filter: blur(var(--reveal-blur));
-  clip-path: var(--reveal-clip);
 }
 
 .reveal[data-reveal="fade"] {
@@ -1523,13 +1520,24 @@ a {
   --reveal-clip: inset(0 100% 0 0);
 }
 
+.reveal-enabled .reveal[data-reveal="card"]:not(.is-visible),
+.reveal-enabled .reveal[data-reveal="wipe"]:not(.is-visible) {
+  clip-path: var(--reveal-clip);
+}
+
 .reveal.is-visible {
   opacity: 1;
   translate: 0;
   scale: 1;
   filter: blur(0);
-  clip-path: inset(0);
   animation: reveal-in 900ms cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms) both;
+}
+
+.reveal[data-reveal="card"].is-visible,
+.reveal[data-reveal="wipe"].is-visible {
+  animation:
+    reveal-in 900ms cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms) both,
+    reveal-clip-in 1000ms cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms) both;
 }
 
 @keyframes reveal-in {
@@ -1538,7 +1546,6 @@ a {
     translate: var(--reveal-x) var(--reveal-y);
     scale: var(--reveal-scale);
     filter: blur(var(--reveal-blur));
-    clip-path: var(--reveal-clip);
   }
 
   to {
@@ -1546,6 +1553,15 @@ a {
     translate: 0;
     scale: 1;
     filter: blur(0);
+  }
+}
+
+@keyframes reveal-clip-in {
+  from {
+    clip-path: var(--reveal-clip);
+  }
+
+  to {
     clip-path: inset(0);
   }
 }
