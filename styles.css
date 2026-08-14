@@ -1051,34 +1051,6 @@ a {
   font-size: clamp(67px, 8vw, 144px);
 }
 
-.experience-stamp {
-  position: absolute;
-  top: 13%;
-  right: 5%;
-  z-index: 3;
-  display: flex;
-  width: 150px;
-  height: 150px;
-  transform: rotate(8deg);
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  border-radius: 50%;
-  background: var(--red);
-  color: #fff;
-}
-
-.experience-stamp b {
-  font: 900 55px/0.8 var(--display);
-  letter-spacing: -0.07em;
-}
-
-.experience-stamp span {
-  font: 600 9px/1.25 var(--mono);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
 .approach-content {
   min-height: 100vh;
   padding: clamp(80px, 7vw, 125px) clamp(28px, 5vw, 90px);
@@ -1818,16 +1790,6 @@ a {
     font-size: clamp(64px, 16vw, 118px);
   }
 
-  .experience-stamp {
-    top: 14%;
-    width: 120px;
-    height: 120px;
-  }
-
-  .experience-stamp b {
-    font-size: 45px;
-  }
-
   .capability {
     grid-template-columns: 84px 1fr;
   }
@@ -1984,17 +1946,6 @@ a {
 
   .approach-overlay h2 {
     font-size: 62px;
-  }
-
-  .experience-stamp {
-    top: 12%;
-    right: 18px;
-    width: 105px;
-    height: 105px;
-  }
-
-  .experience-stamp b {
-    font-size: 39px;
   }
 
   .approach-content {
