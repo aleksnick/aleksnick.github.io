@@ -54,10 +54,21 @@
           revealObserver.unobserve(entry.target);
         });
       },
-      { threshold: 0.08, rootMargin: "0px 0px -6%" },
+      { threshold: 0.01, rootMargin: "0px" },
     );
 
     revealElements.forEach((element) => observer.observe(element));
+
+    requestAnimationFrame(() => {
+      revealElements.forEach((element) => {
+        const rect = element.getBoundingClientRect();
+        const isOnScreen = rect.bottom > 0 && rect.top < window.innerHeight;
+
+        if (!isOnScreen) return;
+        element.classList.add("is-visible");
+        observer.unobserve(element);
+      });
+    });
   } else {
     revealElements.forEach((element) => element.classList.add("is-visible"));
   }
