@@ -18,6 +18,7 @@
 - [Selfchecks](https://selfchecks.github.io/): self-hosted synthetic monitoring as code для API- и browser-проверок
 - [Selflify](https://selflify.github.io/): self-hosted preview deploys для статических SPA через GitHub Actions, SSH и rsync
 - [Noiso](https://noiso.app/): минималистичное iOS-приложение с офлайн-звуками и таймером сна
+- [AppNotes](https://appnotes.tech/): приватные контекстные заметки внутри SPA для поддержки, QA и разработки
 
 ## Public talks
 
