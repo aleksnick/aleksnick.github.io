@@ -1479,6 +1479,37 @@ a {
   line-height: 1.65;
 }
 
+.contact-channel {
+  display: flex;
+  width: min(100%, 600px);
+  margin: 0 0 18px;
+  padding: 17px 19px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  border-left: 5px solid var(--orange);
+  background: rgba(10, 8, 7, 0.7);
+  box-shadow: 8px 8px 0 rgba(237, 45, 31, 0.28);
+  backdrop-filter: blur(7px);
+  font: 600 10px var(--mono);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.contact-channel span {
+  color: rgba(241, 236, 226, 0.64);
+}
+
+.contact-channel a {
+  color: var(--paper);
+  transition: color 180ms ease;
+}
+
+.contact-channel a:hover,
+.contact-channel a:focus-visible {
+  color: var(--orange);
+}
+
 .contact-links {
   display: flex;
   flex-wrap: wrap;
@@ -2103,6 +2134,12 @@ a {
   .contact-copy {
     padding-top: 100px;
     padding-bottom: 110px;
+  }
+
+  .contact-channel {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
   }
 
   .contact h2 {

@@ -29,6 +29,7 @@
 ## Contact
 
 - [Telegram](https://t.me/aleksnick): основной прямой контакт
+- [Telegram-канал](https://t.me/nikolaevfrontend): авторский канал Алексея Николаева
 
 ## Optional
 
