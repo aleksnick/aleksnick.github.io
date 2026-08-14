@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#07080a" />
+    <meta name="theme-color" content="#0a0807" />
     <meta name="color-scheme" content="dark" />
     <meta name="application-name" content="Алексей Николаев" />
     <meta
@@ -28,9 +28,9 @@
       content="Строю продукты, собираю системы и делаю сложное ясным. TradeJS, Selfchecks, Selflify и Noiso."
     />
     <meta property="og:url" content="https://aleksnick.github.io/" />
-    <meta property="og:image" content="https://aleksnick.github.io/og-card.png" />
-    <meta property="og:image:secure_url" content="https://aleksnick.github.io/og-card.png" />
-    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image" content="https://aleksnick.github.io/og-stage.jpg" />
+    <meta property="og:image:secure_url" content="https://aleksnick.github.io/og-stage.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta
@@ -46,7 +46,7 @@
       name="twitter:description"
       content="TradeJS, Selfchecks, Selflify и Noiso. Продуктовый взгляд, frontend-архитектура и инженерная прагматика."
     />
-    <meta name="twitter:image" content="https://aleksnick.github.io/og-card.png" />
+    <meta name="twitter:image" content="https://aleksnick.github.io/og-stage.jpg" />
     <meta
       name="twitter:image:alt"
       content="Алексей Николаев — проекты вместо резюме"
@@ -61,10 +61,11 @@
       title="LLM-ready profile"
     />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preload" as="image" href="assets/photos/hero-stage.jpg" fetchpriority="high" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Manrope:wght@400;500;600;700;800&amp;family=Unbounded:wght@500;600;700&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Manrope:wght@400;500;600;700;800&amp;family=Roboto+Condensed:wght@500;600;700;800;900&amp;display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -123,13 +124,13 @@
             "name": "Алексей Николаев — проекты вместо резюме",
             "description": "Профиль Product Engineer и Frontend Team Lead: проекты, компетенции и выступления.",
             "inLanguage": "ru-RU",
-            "dateModified": "2026-07-22",
+            "dateModified": "2026-08-14",
             "isPartOf": { "@id": "https://aleksnick.github.io/#website" },
             "mainEntity": { "@id": "https://aleksnick.github.io/#person" },
             "about": { "@id": "https://aleksnick.github.io/#person" },
             "primaryImageOfPage": {
               "@type": "ImageObject",
-              "url": "https://aleksnick.github.io/og-card.png",
+              "url": "https://aleksnick.github.io/og-stage.jpg",
               "width": 1200,
               "height": 630,
               "caption": "Алексей Николаев — проекты вместо резюме"
@@ -259,18 +260,18 @@
   </head>
   <body>
     <a class="skip-link" href="#content">Перейти к содержанию</a>
-    <canvas class="signal-canvas" id="signal-canvas" aria-hidden="true"></canvas>
-    <div class="noise" aria-hidden="true"></div>
-    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="light-leak light-leak-one" aria-hidden="true"></div>
+    <div class="light-leak light-leak-two" aria-hidden="true"></div>
     <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
     <header class="site-header">
-      <a class="monogram" href="#top" aria-label="На главную">
-        <span>A</span><i>/</i><span>N</span>
+      <a class="brand" href="#top" aria-label="Алексей Николаев — на главную">
+        <strong>A/N</strong><span>Product engineer</span>
       </a>
       <nav class="site-nav" aria-label="Основная навигация">
         <a href="#projects">Проекты</a>
-        <a href="#approach">Подход</a>
+        <a href="#approach">Компетенции</a>
         <a href="#talks">Выступления</a>
       </nav>
       <a class="header-link" href="https://t.me/aleksnick" target="_blank" rel="me noreferrer">
@@ -279,392 +280,267 @@
     </header>
 
     <main id="content">
-      <section class="hero" id="top">
-        <div class="hero-copy">
-          <div class="eyebrow reveal" data-reveal="fade">
-            <span class="status-dot"></span>
-            Алексей Николаев · Frontend Team Lead · Product Engineer
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-photo" aria-hidden="true">
+          <img src="assets/photos/hero-stage.jpg" alt="" width="1920" height="1280" fetchpriority="high" />
+        </div>
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-outline" aria-hidden="true">ALEXEY</div>
+        <div class="hero-layout">
+          <div class="hero-meta reveal" data-reveal="fade">
+            <span>Алексей Николаев</span>
+            <span>Frontend Team Lead</span>
+            <span>Product Engineer</span>
           </div>
-          <p class="anti-resume reveal" data-reveal="left">НЕ РЕЗЮМЕ / 01</p>
-          <h1 class="hero-title reveal" data-reveal="up">
-            <span>Строю продукты.</span>
-            <span>Собираю системы.</span>
-            <span class="accent-line">Делаю сложное ясным.</span>
+          <p class="hero-label reveal" data-reveal="left">НЕ РЕЗЮМЕ / ПОРТФОЛИО СИСТЕМ</p>
+          <h1 class="hero-title reveal" id="hero-title" data-reveal="poster">
+            <span>Строю</span>
+            <span class="hero-title-shift">продукты.</span>
           </h1>
-          <p class="hero-lead reveal" data-reveal="up">
-            15+ лет в IT. Соединяю продуктовый взгляд, frontend-архитектуру и инженерную
-            прагматику — от первой гипотезы до работающего продукта.
-          </p>
-          <div class="hero-actions reveal" data-reveal="up">
-            <a class="button button-primary" href="#projects">
-              Смотреть проекты <span aria-hidden="true">↓</span>
-            </a>
-            <a
-              class="button button-ghost"
-              href="https://www.linkedin.com/in/aleksnick"
-              target="_blank"
-              rel="me noreferrer"
-            >
-              Профиль <span aria-hidden="true">↗</span>
+          <div class="hero-bottom">
+            <p class="hero-lead reveal" data-reveal="up">
+              Собираю системы.<br />Делаю сложное ясным.
+            </p>
+            <div class="hero-facts reveal" data-reveal="up">
+              <span><b>15+</b> лет в IT</span>
+              <span><b>04</b> своих продукта</span>
+              <span><b>03</b> доклада онлайн</span>
+            </div>
+            <a class="round-link reveal" data-reveal="scale" href="#projects" aria-label="Перейти к проектам">
+              <span>Смотреть<br />проекты</span><b aria-hidden="true">↓</b>
             </a>
           </div>
         </div>
-
-        <div class="hero-system reveal" data-reveal="scale">
-          <div class="system-label system-label-top">PROJECT SYSTEM / LIVE</div>
-          <div class="orbit orbit-one" aria-hidden="true"></div>
-          <div class="orbit orbit-two" aria-hidden="true"></div>
-          <div class="core">
-            <span class="core-pulse"></span>
-            <strong>AN</strong>
-            <small>BUILD / SHIP / LEARN</small>
-          </div>
-          <a class="satellite satellite-trade" href="https://tradejs.dev" target="_blank" rel="noreferrer">
-            <span>01</span><strong>TradeJS</strong><small>systems</small>
-          </a>
-          <a class="satellite satellite-checks" href="https://selfchecks.github.io/" target="_blank" rel="noreferrer">
-            <span>02</span><strong>Selfchecks</strong><small>reliability</small>
-          </a>
-          <a class="satellite satellite-lify" href="https://selflify.github.io/" target="_blank" rel="noreferrer">
-            <span>03</span><strong>Selflify</strong><small>delivery</small>
-          </a>
-          <a class="satellite satellite-noiso" href="https://noiso.app" target="_blank" rel="noreferrer">
-            <span>04</span><strong>Noiso</strong><small>product</small>
-          </a>
-          <div class="system-coordinates" aria-hidden="true">56.8619° N / 53.2324° E</div>
-        </div>
-
-        <div class="hero-index" aria-hidden="true">
-          <span>01</span>
-          <span>SCROLL TO EXPLORE</span>
-          <i></i>
-        </div>
+        <p class="hero-side-note" aria-hidden="true">BUILD / SHIP / EXPLAIN — 56.8619° N</p>
       </section>
 
-      <div class="ticker reveal" data-reveal="wipe" aria-hidden="true">
+      <div class="ticker" aria-hidden="true">
         <div class="ticker-track">
-          <span>TYPE­SCRIPT</span><i>✦</i><span>PRODUCT ENGINEERING</span><i>✦</i>
-          <span>FRONTEND ARCHITECTURE</span><i>✦</i><span>DEV TOOLS</span><i>✦</i>
-          <span>SELF-HOSTED</span><i>✦</i><span>CI/CD</span><i>✦</i>
-          <span>TYPE­SCRIPT</span><i>✦</i><span>PRODUCT ENGINEERING</span><i>✦</i>
-          <span>FRONTEND ARCHITECTURE</span><i>✦</i><span>DEV TOOLS</span><i>✦</i>
-          <span>SELF-HOSTED</span><i>✦</i><span>CI/CD</span><i>✦</i>
+          <span>PRODUCT ENGINEERING</span><i>●</i><span>FRONTEND ARCHITECTURE</span><i>●</i>
+          <span>DEV TOOLS</span><i>●</i><span>SELF-HOSTED</span><i>●</i><span>LEADERSHIP</span><i>●</i>
+          <span>PRODUCT ENGINEERING</span><i>●</i><span>FRONTEND ARCHITECTURE</span><i>●</i>
+          <span>DEV TOOLS</span><i>●</i><span>SELF-HOSTED</span><i>●</i><span>LEADERSHIP</span><i>●</i>
         </div>
       </div>
 
       <section class="manifesto section-shell" id="manifesto">
-        <div class="section-kicker reveal" data-reveal="left">
-          <span>02</span>
-          <span>ЗАЧЕМ ЭТОТ САЙТ</span>
+        <div class="manifesto-title reveal" data-reveal="poster">
+          <span class="section-code">ПОЗИЦИЯ / 01</span>
+          <h2>НЕ<br /><em>РЕЗЮМЕ.</em></h2>
+          <p>Опыт интересен не количеством лет. Интересно, что из него получилось.</p>
         </div>
-        <div class="manifesto-grid">
-          <h2 class="display-heading reveal" data-reveal="up">
-            Опыт интересен не количеством лет.<br />Интересно, <em>что из него получилось.</em>
-          </h2>
-          <div class="manifesto-copy reveal" data-reveal="right">
-            <p>
-              Поэтому здесь нет бесконечной ленты должностей. Здесь — проекты, в которых идея
-              проходит весь путь: исследование, архитектура, интерфейс, инфраструктура, запуск.
-            </p>
-            <p class="mono-note">// Главный артефакт хорошего опыта — работающая система.</p>
-          </div>
+        <figure class="portrait-poster reveal" data-reveal="photo">
+          <img src="assets/photos/portrait-wall.jpg" alt="Алексей Николаев после выступления" width="1920" height="1280" loading="lazy" />
+          <figcaption><span>AFTER TALK / 2026</span><b>A/N</b></figcaption>
+        </figure>
+        <div class="manifesto-copy reveal" data-reveal="right">
+          <p>
+            Поэтому здесь нет бесконечной ленты должностей. Здесь — проекты, в которых идея
+            проходит весь путь: исследование, архитектура, интерфейс, инфраструктура, запуск.
+          </p>
+          <p class="mono-note">Главный артефакт хорошего опыта — работающая система.</p>
         </div>
       </section>
 
       <section class="projects section-shell" id="projects">
-        <div class="section-heading reveal" data-reveal="up">
+        <header class="section-heading reveal" data-reveal="up">
           <div>
-            <div class="section-kicker"><span>03</span><span>SELECTED PROJECTS</span></div>
-            <h2 class="display-heading">Проекты, которые<br />говорят за меня.</h2>
+            <span class="section-code">СОЗДАНО / 02</span>
+            <h2>Selected<br /><em>projects</em></h2>
           </div>
           <p>
             Четыре продукта на пересечении frontend, инфраструктуры, автоматизации и
             продуктового мышления.
           </p>
-        </div>
+        </header>
 
-        <div class="project-list">
-          <article class="project-card project-card-featured reveal" data-reveal="card" data-accent="lime">
-            <a class="project-link" href="https://tradejs.dev" target="_blank" rel="noreferrer" aria-label="Открыть TradeJS">
-              <div class="project-visual">
-                <img
-                  src="https://tradejs.dev/og-image-v2.png"
-                  alt="Интерфейс и айдентика TradeJS"
-                  loading="lazy"
-                />
-                <div class="visual-scan" aria-hidden="true"></div>
-                <span class="project-open" aria-hidden="true">↗</span>
-              </div>
-              <div class="project-info">
-                <div class="project-meta"><span>01 / SYSTEM</span><span>2026</span></div>
+        <div class="project-grid">
+          <article class="project-card project-trade reveal" data-reveal="poster">
+            <a href="https://tradejs.dev" target="_blank" rel="noreferrer" aria-label="Открыть TradeJS">
+              <div class="project-index"><span>01 / SYSTEM</span><span>TRADEJS.DEV ↗</span></div>
+              <div class="project-ghost" aria-hidden="true">T/JS</div>
+              <div class="project-copy">
                 <h3>TradeJS</h3>
                 <p class="project-tagline">TypeScript-фреймворк для алгоритмических стратегий.</p>
                 <p class="project-description">
                   Создание, бэктест и запуск торговых стратегий в одном типизированном жизненном
                   цикле — с self-hosted runtime и воспроизводимыми результатами.
                 </p>
-                <ul class="tag-list">
-                  <li>TypeScript</li><li>Backtesting</li><li>Self-hosted</li><li>DX</li>
-                </ul>
+                <ul class="tag-list"><li>TypeScript</li><li>Backtesting</li><li>Self-hosted</li><li>DX</li></ul>
               </div>
+              <span class="project-arrow" aria-hidden="true">↗</span>
             </a>
           </article>
 
-          <article class="project-card reveal" data-reveal="card" data-accent="mint">
-            <a class="project-link" href="https://selfchecks.github.io/" target="_blank" rel="noreferrer" aria-label="Открыть Selfchecks">
-              <div class="project-visual">
-                <img
-                  src="https://selfchecks.github.io/og-card.png"
-                  alt="Интерфейс Selfchecks"
-                  loading="lazy"
-                />
-                <div class="visual-scan" aria-hidden="true"></div>
-                <span class="project-open" aria-hidden="true">↗</span>
-              </div>
-              <div class="project-info">
-                <div class="project-meta"><span>02 / RELIABILITY</span><span>LIVE</span></div>
+          <article class="project-card project-checks reveal" data-reveal="poster">
+            <a href="https://selfchecks.github.io/" target="_blank" rel="noreferrer" aria-label="Открыть Selfchecks">
+              <div class="project-index"><span>02 / RELIABILITY</span><span>LIVE ↗</span></div>
+              <div class="project-ghost" aria-hidden="true">CHECK</div>
+              <div class="project-copy">
                 <h3>Selfchecks</h3>
                 <p class="project-tagline">Self-hosted synthetic monitoring as code.</p>
                 <p class="project-description">
-                  API- и browser-проверки на своей инфраструктуре: расписания, CI-отчёты,
-                  Playwright traces, скриншоты, видео и уведомления о восстановлении.
+                  API- и browser-проверки на своей инфраструктуре: CI-отчёты, Playwright traces,
+                  скриншоты, видео и уведомления о восстановлении.
                 </p>
-                <ul class="tag-list">
-                  <li>Playwright</li><li>Observability</li><li>CI</li>
-                </ul>
+                <ul class="tag-list"><li>Playwright</li><li>Observability</li><li>CI</li></ul>
               </div>
+              <span class="project-arrow" aria-hidden="true">↗</span>
             </a>
           </article>
 
-          <article class="project-card reveal" data-reveal="card" data-accent="violet">
-            <a class="project-link" href="https://selflify.github.io/" target="_blank" rel="noreferrer" aria-label="Открыть Selflify">
-              <div class="project-visual">
-                <img
-                  src="https://selflify.github.io/og-card.png"
-                  alt="Интерфейс Selflify"
-                  loading="lazy"
-                />
-                <div class="visual-scan" aria-hidden="true"></div>
-                <span class="project-open" aria-hidden="true">↗</span>
-              </div>
-              <div class="project-info">
-                <div class="project-meta"><span>03 / DELIVERY</span><span>OPEN SOURCE</span></div>
+          <article class="project-card project-lify reveal" data-reveal="poster">
+            <a href="https://selflify.github.io/" target="_blank" rel="noreferrer" aria-label="Открыть Selflify">
+              <div class="project-index"><span>03 / DELIVERY</span><span>OPEN SOURCE ↗</span></div>
+              <div class="project-ghost" aria-hidden="true">SHIP</div>
+              <div class="project-copy">
                 <h3>Selflify</h3>
                 <p class="project-tagline">Preview deploys — на своём сервере.</p>
                 <p class="project-description">
                   Контроль preview-окружений для статических SPA: GitHub Actions, SSH/rsync,
-                  PR-комментарии и собственная инфраструктура вместо внешней платформы.
+                  PR-комментарии и собственная инфраструктура.
                 </p>
-                <ul class="tag-list">
-                  <li>GitHub Actions</li><li>DevOps</li><li>SPA</li>
-                </ul>
+                <ul class="tag-list"><li>GitHub Actions</li><li>DevOps</li><li>SPA</li></ul>
               </div>
+              <span class="project-arrow" aria-hidden="true">↗</span>
             </a>
           </article>
 
-          <article class="project-card project-card-noiso reveal" data-reveal="card" data-accent="amber">
-            <a class="project-link" href="https://noiso.app" target="_blank" rel="noreferrer" aria-label="Открыть Noiso">
-              <div class="project-visual">
-                <div class="noiso-orbit" aria-hidden="true"></div>
-                <img
-                  class="noiso-icon"
-                  src="https://noiso.app/assets/icon/noiso-icon.png"
-                  alt="Иконка Noiso"
-                  loading="lazy"
-                />
-                <span class="project-open" aria-hidden="true">↗</span>
-              </div>
-              <div class="project-info">
-                <div class="project-meta"><span>04 / PRODUCT</span><span>iOS</span></div>
+          <article class="project-card project-noiso reveal" data-reveal="poster">
+            <a href="https://noiso.app" target="_blank" rel="noreferrer" aria-label="Открыть Noiso">
+              <div class="project-index"><span>04 / PRODUCT</span><span>iOS ↗</span></div>
+              <div class="project-ghost" aria-hidden="true">NOISE / 0</div>
+              <div class="project-copy">
                 <h3>Noiso</h3>
                 <p class="project-tagline">Тихое приложение для спокойного сна.</p>
                 <p class="project-description">
-                  Семь офлайн-звуков, фоновое воспроизведение и мягкий sleep timer. Без рекламы,
-                  подписок, покупок и регистрации — продукт, в котором важно уметь остановиться.
+                  Семь офлайн-звуков и мягкий sleep timer. Без рекламы, подписок, покупок и
+                  регистрации — продукт, в котором важно уметь остановиться.
                 </p>
-                <ul class="tag-list">
-                  <li>iOS</li><li>Product</li><li>UX</li><li>Offline</li>
-                </ul>
+                <ul class="tag-list"><li>iOS</li><li>Product</li><li>UX</li><li>Offline</li></ul>
               </div>
+              <span class="project-arrow" aria-hidden="true">↗</span>
             </a>
           </article>
         </div>
       </section>
 
       <section class="approach section-shell" id="approach">
-        <div class="section-heading reveal" data-reveal="up">
-          <div>
-            <div class="section-kicker"><span>04</span><span>HOW I WORK</span></div>
-            <h2 class="display-heading">Не только<br />frontend.</h2>
+        <div class="approach-poster reveal" data-reveal="photo">
+          <img src="assets/photos/stage-system.jpg" alt="Алексей Николаев рассказывает о системной архитектуре" width="1920" height="1280" loading="lazy" />
+          <div class="approach-overlay">
+            <span class="section-code">ОПТИКА / 03</span>
+            <h2>Не только<br /><em>frontend.</em></h2>
           </div>
-          <p>
+          <div class="experience-stamp" aria-label="Более 15 лет в IT"><b>15+</b><span>лет<br />в IT</span></div>
+        </div>
+        <div class="approach-content">
+          <p class="approach-lead reveal" data-reveal="up">
             Frontend — моя основная оптика. Но сильный продукт требует видеть всю систему:
             пользователей, код, доставку, эксплуатацию и команду.
           </p>
-        </div>
-
-        <div class="capability-pipeline">
-          <div class="experience-panel reveal" data-reveal="left">
-            <div class="experience-readout">
-              <span>15+</span>
-              <strong>лет в IT</strong>
-            </div>
-            <p>От первого пикселя до систем, команд и собственных продуктов.</p>
-            <div class="experience-scale" aria-hidden="true">
-              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            </div>
-            <small>EXPERIENCE / CONTINUOUS</small>
-          </div>
-
-          <div class="pipeline-stages">
-            <article class="capability capability-one reveal" data-reveal="card">
-              <div class="capability-index"><span>01</span><small>DISCOVER</small></div>
-              <h3>Product Engineering</h3>
+          <div class="capability-list">
+            <article class="capability reveal" data-reveal="left">
+              <span>DISCOVER</span><h3>Product Engineering</h3>
               <p>Проверить гипотезу, выделить главное, довести до полезного результата.</p>
-              <div class="capability-signal"><i></i><span>idea / value</span></div>
             </article>
-            <article class="capability capability-two reveal" data-reveal="card">
-              <div class="capability-index"><span>02</span><small>DESIGN</small></div>
-              <h3>Frontend Architecture</h3>
+            <article class="capability reveal" data-reveal="left">
+              <span>DESIGN</span><h3>Frontend Architecture</h3>
               <p>TypeScript, сложные SPA, монорепозитории и решения, которые выдерживают рост.</p>
-              <div class="capability-signal"><i></i><span>structure / scale</span></div>
             </article>
-            <article class="capability capability-three reveal" data-reveal="card">
-              <div class="capability-index"><span>03</span><small>DELIVER</small></div>
-              <h3>Platforms &amp; DX</h3>
+            <article class="capability reveal" data-reveal="left">
+              <span>DELIVER</span><h3>Platforms &amp; DX</h3>
               <p>Инструменты, CI/CD и self-hosted системы, сокращающие путь от кода до сигнала.</p>
-              <div class="capability-signal"><i></i><span>code / runtime</span></div>
             </article>
-            <article class="capability capability-four reveal" data-reveal="card">
-              <div class="capability-index"><span>04</span><small>AMPLIFY</small></div>
-              <h3>Leadership</h3>
+            <article class="capability reveal" data-reveal="left">
+              <span>AMPLIFY</span><h3>Leadership</h3>
               <p>Frontend Team Lead в Sendsay: контекст, архитектура, обратная связь и доставка.</p>
-              <div class="capability-signal"><i></i><span>team / impact</span></div>
             </article>
-          </div>
-
-          <div class="pipeline-legend" aria-hidden="true">
-            <span>INPUT / IDEA</span><i></i><b>→</b><i></i><span>OUTPUT / WORKING SYSTEM</span>
           </div>
         </div>
       </section>
 
       <section class="talks section-shell" id="talks">
-        <div class="section-heading reveal" data-reveal="up">
+        <header class="talks-heading reveal" data-reveal="poster">
+          <img src="assets/photos/stage-wide.jpg" alt="Выступление Алексея Николаева перед аудиторией" width="1920" height="1280" loading="lazy" />
           <div>
-            <div class="section-kicker"><span>05</span><span>PUBLIC TALKS</span></div>
-            <h2 class="display-heading">Разобрался —<br />расскажи другим.</h2>
+            <span class="section-code">НА СЦЕНЕ / 04</span>
+            <h2>Разобрался —<br /><em>расскажи другим.</em></h2>
+            <p>Архитектура, инженерные процессы и коммуникация — без теории ради теории.</p>
           </div>
-          <p>
-            Выступления об архитектуре, инженерных процессах и коммуникации — без теории ради
-            теории.
-          </p>
-        </div>
+        </header>
 
         <div class="talk-list">
-          <article class="talk-card reveal" data-reveal="card">
-            <div class="talk-thumb">
-              <img src="https://i.ytimg.com/vi/whpEE9uotb8/hqdefault.jpg" alt="Превью доклада «Как жить с монорепой»" loading="lazy" />
-              <a
-                class="video-trigger"
-                href="https://www.youtube.com/watch?v=whpEE9uotb8"
-                data-video-id="whpEE9uotb8"
-                data-video-title="Как жить с монорепой"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Смотреть доклад «Как жить с монорепой» на сайте"
-              >
-                <span class="play" aria-hidden="true"><i></i></span>
+          <article class="talk-card talk-card-featured reveal" data-reveal="poster">
+            <div class="talk-media">
+              <img src="assets/photos/hero-stage.jpg" alt="Алексей Николаев выступает с докладом о зависимостях" width="1920" height="1280" loading="lazy" />
+              <a class="video-trigger" href="https://www.youtube.com/watch?v=whpEE9uotb8" data-video-id="whpEE9uotb8" data-video-title="Как жить с монорепой" target="_blank" rel="noreferrer" aria-label="Смотреть доклад «Как жить с монорепой» на сайте">
+                <span class="play"><i aria-hidden="true"></i><b>Смотреть</b></span>
               </a>
             </div>
             <div class="talk-copy">
-              <div class="project-meta">
-                <span>A?.FRONTEND COMMUNITY</span>
-                <a class="talk-external" href="https://www.youtube.com/watch?v=whpEE9uotb8" target="_blank" rel="noreferrer">YOUTUBE ↗</a>
-              </div>
-              <h3>Как жить с монорепой</h3>
+              <span class="talk-number">TALK / 01 · A?.FRONTEND COMMUNITY</span>
+              <h3>Как жить<br />с монорепой</h3>
               <p>Архитектура, инструменты, автоматизация задач и CI/CD на реальном примере.</p>
+              <a class="talk-external" href="https://www.youtube.com/watch?v=whpEE9uotb8" target="_blank" rel="noreferrer">Открыть на YouTube ↗</a>
             </div>
           </article>
-          <article class="talk-card reveal" data-reveal="card">
-            <div class="talk-thumb">
-              <img src="https://i.ytimg.com/vi/fh7J93LUZLE/hqdefault.jpg" alt="Превью доклада о фидбэке по тестовому заданию" loading="lazy" />
-              <a
-                class="video-trigger"
-                href="https://www.youtube.com/watch?v=fh7J93LUZLE"
-                data-video-id="fh7J93LUZLE"
-                data-video-title="Фидбэк по тестовому заданию? Не, не слышал"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Смотреть доклад «Фидбэк по тестовому заданию? Не, не слышал» на сайте"
-              >
-                <span class="play" aria-hidden="true"><i></i></span>
+
+          <article class="talk-card reveal" data-reveal="poster">
+            <div class="talk-media">
+              <img src="assets/photos/stage-cameras.jpg" alt="Камеры снимают выступление Алексея Николаева" width="1920" height="1280" loading="lazy" />
+              <a class="video-trigger" href="https://www.youtube.com/watch?v=fh7J93LUZLE" data-video-id="fh7J93LUZLE" data-video-title="Фидбэк по тестовому заданию? Не, не слышал" target="_blank" rel="noreferrer" aria-label="Смотреть доклад о фидбэке по тестовому заданию на сайте">
+                <span class="play"><i aria-hidden="true"></i><b>Смотреть</b></span>
               </a>
             </div>
             <div class="talk-copy">
-              <div class="project-meta">
-                <span>MANAGEMENT CHANNEL</span>
-                <a class="talk-external" href="https://www.youtube.com/watch?v=fh7J93LUZLE" target="_blank" rel="noreferrer">YOUTUBE ↗</a>
-              </div>
-              <h3>Фидбэк по тестовому заданию? Не, не слышал</h3>
+              <span class="talk-number">TALK / 02 · MANAGEMENT</span>
+              <h3>Фидбэк по тестовому заданию?</h3>
               <p>Почему обратная связь кандидатам — часть зрелого инженерного менеджмента.</p>
+              <a class="talk-external" href="https://www.youtube.com/watch?v=fh7J93LUZLE" target="_blank" rel="noreferrer">YouTube ↗</a>
             </div>
           </article>
-          <article class="talk-card reveal" data-reveal="card">
-            <div class="talk-thumb">
-              <img src="https://i.ytimg.com/vi/RAX4p_y67Yk/hqdefault.jpg" alt="Превью доклада «Инсайды из отдела QA»" loading="lazy" />
-              <a
-                class="video-trigger"
-                href="https://www.youtube.com/watch?v=RAX4p_y67Yk"
-                data-video-id="RAX4p_y67Yk"
-                data-video-title="Инсайды из отдела QA"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Смотреть доклад «Инсайды из отдела QA» на сайте"
-              >
-                <span class="play" aria-hidden="true"><i></i></span>
+
+          <article class="talk-card reveal" data-reveal="poster">
+            <div class="talk-media">
+              <img src="assets/photos/portrait-stage.jpg" alt="Алексей Николаев во время выступления" width="1920" height="1280" loading="lazy" />
+              <a class="video-trigger" href="https://www.youtube.com/watch?v=RAX4p_y67Yk" data-video-id="RAX4p_y67Yk" data-video-title="Инсайды из отдела QA" target="_blank" rel="noreferrer" aria-label="Смотреть доклад «Инсайды из отдела QA» на сайте">
+                <span class="play"><i aria-hidden="true"></i><b>Смотреть</b></span>
               </a>
             </div>
             <div class="talk-copy">
-              <div class="project-meta">
-                <span>YAMAL DEV</span>
-                <a class="talk-external" href="https://www.youtube.com/watch?v=RAX4p_y67Yk" target="_blank" rel="noreferrer">YOUTUBE ↗</a>
-              </div>
-              <h3>Инсайды из отдела QA</h3>
+              <span class="talk-number">TALK / 03 · YAMAL DEV</span>
+              <h3>Инсайды<br />из отдела QA</h3>
               <p>Взгляд на качество и командную работу по другую сторону привычных границ.</p>
+              <a class="talk-external" href="https://www.youtube.com/watch?v=RAX4p_y67Yk" target="_blank" rel="noreferrer">YouTube ↗</a>
             </div>
           </article>
         </div>
       </section>
 
       <section class="contact section-shell" id="contact">
-        <div class="contact-wave reveal" data-reveal="right" aria-hidden="true">
-          <div class="wave-readout"><span>SIGNAL / OPEN</span><small>CHANNEL 01</small></div>
-          <div class="wave-bars">
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        <img class="contact-photo" src="assets/photos/portrait-wall.jpg" alt="Портрет Алексея Николаева" width="1920" height="1280" loading="lazy" />
+        <div class="contact-shade" aria-hidden="true"></div>
+        <div class="contact-copy">
+          <span class="section-code reveal" data-reveal="left">СВЯЗЬ / 05 · НЕ «ИЩУ РАБОТУ»</span>
+          <h2 class="reveal" data-reveal="poster">Есть сильная<br />идея? <em>Поговорим.</em></h2>
+          <p class="reveal" data-reveal="up">
+            Этот сайт — витрина того, что я строю и как думаю. Если вам близок такой подход —
+            давайте познакомимся.
+          </p>
+          <div class="contact-links reveal" data-reveal="up">
+            <a class="contact-primary" href="https://t.me/aleksnick" target="_blank" rel="me noreferrer">Telegram <span>↗</span></a>
+            <a href="https://www.linkedin.com/in/aleksnick" target="_blank" rel="me noreferrer">LinkedIn <span>↗</span></a>
+            <a href="https://career.habr.com/aleksnick" target="_blank" rel="me noreferrer">Хабр Карьера <span>↗</span></a>
+            <a href="https://github.com/aleksnick" target="_blank" rel="me noreferrer">GitHub <span>↗</span></a>
           </div>
-          <div class="wave-status"><span>IDEA</span><b>→</b><span>DIALOGUE</span></div>
         </div>
-        <div class="section-kicker reveal" data-reveal="left"><span>06</span><span>CONNECT</span></div>
-        <p class="contact-pretitle reveal" data-reveal="up">НЕ «ИЩУ РАБОТУ»</p>
-        <h2 class="reveal" data-reveal="up">Открыт сильным идеям,<br /><em>технологиям и диалогу.</em></h2>
-        <p class="contact-copy reveal" data-reveal="up">
-          Этот сайт — витрина того, что я строю и как думаю. Если вам близок такой подход —
-          давайте познакомимся.
-        </p>
-        <div class="contact-links reveal" data-reveal="up">
-          <a href="https://t.me/aleksnick" target="_blank" rel="me noreferrer">Telegram <span>↗</span></a>
-          <a href="https://www.linkedin.com/in/aleksnick" target="_blank" rel="me noreferrer">LinkedIn <span>↗</span></a>
-          <a href="https://career.habr.com/aleksnick" target="_blank" rel="me noreferrer">Хабр Карьера <span>↗</span></a>
-          <a href="https://github.com/aleksnick" target="_blank" rel="me noreferrer">GitHub <span>↗</span></a>
-        </div>
+        <div class="contact-marquee" aria-hidden="true">BUILD · SHIP · LEARN · EXPLAIN ·</div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="monogram footer-monogram"><span>A</span><i>/</i><span>N</span></div>
+      <a class="brand footer-brand" href="#top" aria-label="Наверх"><strong>A/N</strong><span>Product engineer</span></a>
       <p>Built as a product, not a résumé.</p>
       <p>© <span id="year">2026</span> Алексей Николаев</p>
       <a href="#top">Наверх ↑</a>
