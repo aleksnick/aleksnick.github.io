@@ -657,6 +657,9 @@ a {
 .project-card {
   --arrow-bg: var(--paper);
   --arrow-fg: var(--ink);
+  --copy-scrim: rgba(10, 8, 7, 0.88);
+  --title-fill: var(--paper);
+  --title-stroke: rgba(10, 8, 7, 0.92);
   position: relative;
   overflow: hidden;
   min-width: 0;
@@ -789,12 +792,26 @@ a {
   max-width: 630px;
   margin-top: auto;
   padding-right: 74px;
+  isolation: isolate;
+}
+
+.project-copy::before {
+  position: absolute;
+  inset: -26px -54px -28px -28px;
+  z-index: -1;
+  background: linear-gradient(90deg, var(--copy-scrim) 0%, var(--copy-scrim) 54%, transparent 100%);
+  content: "";
+  pointer-events: none;
 }
 
 .project-copy h3 {
   margin: 60px 0 8px;
+  color: var(--title-fill);
   font: 900 clamp(52px, 6.4vw, 116px)/0.82 var(--display);
   letter-spacing: -0.07em;
+  paint-order: stroke fill;
+  -webkit-text-stroke: 1.5px var(--title-stroke);
+  text-shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
   transition:
     clip-path 900ms cubic-bezier(0.77, 0, 0.18, 1) 120ms,
     transform 900ms cubic-bezier(0.16, 1, 0.3, 1) 120ms;
@@ -894,9 +911,9 @@ a {
   --preview-rotate: 2.2deg;
   --preview-hover-rotate: -0.5deg;
   --preview-shadow: var(--red);
-  top: 11%;
-  right: -5%;
-  width: 62%;
+  top: 10%;
+  right: -9%;
+  width: 78%;
   box-shadow:
     0 28px 65px rgba(0, 0, 0, 0.52),
     11px 11px 0 var(--red);
@@ -910,24 +927,20 @@ a {
   color: rgba(241, 236, 226, 0.7);
 }
 
+.project-trade .project-copy {
+  margin-bottom: clamp(46px, 5vw, 76px);
+}
+
 .project-checks {
   --arrow-bg: var(--ink);
   --arrow-fg: var(--paper);
+  --copy-scrim: rgba(241, 236, 226, 0.92);
+  --title-fill: var(--ink);
+  --title-stroke: rgba(241, 236, 226, 0.96);
   grid-column: 8 / -1;
   grid-row: 1;
   background: var(--paper);
   color: var(--ink);
-}
-
-.project-checks::after {
-  position: absolute;
-  top: 31%;
-  right: 9%;
-  width: clamp(54px, 6vw, 105px);
-  aspect-ratio: 1;
-  background: var(--blue);
-  content: "";
-  transition: transform 1050ms cubic-bezier(0.16, 1, 0.3, 1) 120ms;
 }
 
 .project-checks .project-ghost {
@@ -944,9 +957,9 @@ a {
   --preview-rotate: -3.2deg;
   --preview-hover-rotate: 0.4deg;
   --preview-shadow: var(--blue);
-  top: 15%;
-  right: -9%;
-  width: 52%;
+  top: 10%;
+  right: -15%;
+  width: 78%;
   border-color: rgba(10, 8, 7, 0.42);
   box-shadow:
     0 22px 48px rgba(10, 8, 7, 0.3),
@@ -964,7 +977,7 @@ a {
 }
 
 .project-checks .project-copy {
-  max-width: 58%;
+  max-width: 72%;
 }
 
 .project-checks .project-tagline {
@@ -978,6 +991,7 @@ a {
 .project-lify {
   --arrow-bg: #fff;
   --arrow-fg: var(--red);
+  --copy-scrim: rgba(166, 22, 20, 0.88);
   grid-column: 8 / -1;
   grid-row: 2;
   background: var(--red);
@@ -1012,9 +1026,9 @@ a {
   --preview-rotate: 3deg;
   --preview-hover-rotate: -0.5deg;
   --preview-shadow: rgba(255, 255, 255, 0.74);
-  top: 14%;
-  right: -8%;
-  width: 52%;
+  top: 10%;
+  right: -15%;
+  width: 78%;
   box-shadow:
     0 24px 52px rgba(65, 3, 14, 0.42),
     9px 9px 0 rgba(255, 255, 255, 0.74);
@@ -1025,7 +1039,7 @@ a {
 }
 
 .project-lify .project-copy {
-  max-width: 58%;
+  max-width: 72%;
 }
 
 .project-lify .project-description {
@@ -1033,6 +1047,7 @@ a {
 }
 
 .project-noiso {
+  --copy-scrim: rgba(11, 61, 58, 0.9);
   grid-column: 1 / span 5;
   grid-row: 3;
   min-height: 520px;
@@ -1071,16 +1086,16 @@ a {
 }
 
 .project-noiso .project-copy {
-  max-width: 67%;
+  max-width: 78%;
 }
 
 .project-noiso .project-preview {
   --preview-rotate: -2.5deg;
   --preview-hover-rotate: 0.45deg;
   --preview-shadow: var(--orange);
-  top: 6%;
-  right: 2%;
-  width: 34%;
+  top: 2%;
+  right: -2%;
+  width: 52%;
   aspect-ratio: 9 / 16;
   box-shadow:
     0 28px 58px rgba(0, 0, 0, 0.46),
@@ -1103,6 +1118,7 @@ a {
 .project-appnotes {
   --arrow-bg: var(--yellow);
   --arrow-fg: var(--ink);
+  --copy-scrim: rgba(18, 67, 190, 0.9);
   grid-column: 6 / -1;
   grid-row: 3;
   min-height: 520px;
@@ -1154,9 +1170,9 @@ a {
   --preview-rotate: 2.4deg;
   --preview-hover-rotate: -0.45deg;
   --preview-shadow: var(--yellow);
-  top: 6%;
-  right: -2%;
-  width: 44%;
+  top: 3%;
+  right: -8%;
+  width: 70%;
   aspect-ratio: 1;
   border-color: rgba(255, 255, 255, 0.78);
   box-shadow:
@@ -1169,7 +1185,7 @@ a {
 }
 
 .project-appnotes .project-copy {
-  max-width: 52%;
+  max-width: 72%;
 }
 
 .project-appnotes .project-description {
@@ -1835,10 +1851,6 @@ a {
   transform: translate3d(0, -72%, 0) rotate(14deg);
 }
 
-.reveal-enabled .project-checks:not(.is-visible)::after {
-  transform: translate3d(180%, -80%, 0) rotate(35deg);
-}
-
 .reveal-enabled .project-lify:not(.is-visible)::after {
   transform: scale(0.12) rotate(-90deg);
 }
@@ -2068,20 +2080,24 @@ a {
   .project-checks .project-preview,
   .project-lify .project-preview,
   .project-appnotes .project-preview {
-    top: 76px;
-    right: -5%;
-    width: min(62%, 430px);
+    top: 68px;
+    right: -10%;
+    width: min(78%, 540px);
   }
 
   .project-noiso .project-preview {
-    top: 68px;
-    right: 1%;
-    width: min(40%, 280px);
+    top: 44px;
+    right: -2%;
+    width: min(52%, 320px);
   }
 
   .project-checks .project-copy,
   .project-lify .project-copy {
-    max-width: 54%;
+    max-width: 72%;
+  }
+
+  .project-trade .project-copy {
+    margin-bottom: 0;
   }
 
   .project-noiso::before {
@@ -2240,22 +2256,22 @@ a {
 
   .project-checks,
   .project-lify {
-    min-height: 620px;
+    min-height: 520px;
   }
 
   .project-trade .project-preview,
   .project-checks .project-preview,
   .project-lify .project-preview,
   .project-appnotes .project-preview {
-    top: 76px;
-    right: -8%;
-    width: 72%;
+    top: 72px;
+    right: -14%;
+    width: 84%;
   }
 
   .project-noiso .project-preview {
-    top: 72px;
-    right: 2%;
-    width: 46%;
+    top: 56px;
+    right: -2%;
+    width: 54%;
   }
 
   .project-trade .project-copy,
