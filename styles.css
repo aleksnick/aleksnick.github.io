@@ -427,31 +427,95 @@ a {
 }
 
 .round-link {
-  display: grid;
+  position: relative;
+  display: flex;
   width: 112px;
   height: 112px;
-  padding: 18px;
-  grid-template-columns: 1fr auto;
+  padding: 0;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 7px;
   border-radius: 50%;
   background: var(--red);
   color: #fff;
   font: 600 9px/1.45 var(--mono);
   letter-spacing: 0.05em;
+  text-align: center;
   text-transform: uppercase;
+  isolation: isolate;
   transition:
-    transform 250ms cubic-bezier(0.2, 0.8, 0.2, 1),
-    background 250ms ease;
+    transform 420ms cubic-bezier(0.16, 1, 0.3, 1),
+    background 250ms ease,
+    box-shadow 420ms ease;
+}
+
+.round-link::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: inherit;
+  content: "";
+  opacity: 0;
+  transition:
+    opacity 420ms ease,
+    transform 520ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.round-link span {
+  transition: transform 320ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .round-link b {
+  display: block;
   font-size: 18px;
+  line-height: 1;
 }
 
 .round-link:hover,
 .round-link:focus-visible {
-  transform: rotate(-8deg) scale(1.06);
+  transform: rotate(-4deg) scale(1.07);
   background: var(--orange);
+  box-shadow: 0 18px 42px rgba(237, 45, 31, 0.32);
+}
+
+.round-link:hover::before,
+.round-link:focus-visible::before {
+  transform: scale(1.18);
+  opacity: 1;
+}
+
+.round-link:hover span,
+.round-link:focus-visible span {
+  transform: translateY(-2px);
+}
+
+.round-link:hover b,
+.round-link:focus-visible b {
+  animation: round-link-arrow 620ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes round-link-arrow {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  42% {
+    transform: translateY(9px);
+    opacity: 0;
+  }
+
+  43% {
+    transform: translateY(-8px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .hero-side-note {
@@ -2014,7 +2078,7 @@ a {
   .round-link {
     width: 94px;
     height: 94px;
-    padding: 14px;
+    padding: 0;
   }
 
   .manifesto {
@@ -2218,7 +2282,7 @@ a {
   .round-link {
     width: 82px;
     height: 82px;
-    padding: 11px;
+    padding: 0;
     font-size: 7px;
   }
 
