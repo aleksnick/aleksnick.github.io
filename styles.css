@@ -513,6 +513,10 @@ a {
   font-style: normal;
 }
 
+.section-heading h2 .projects-title-word {
+  letter-spacing: 0;
+}
+
 .manifesto-title h2 em,
 .section-heading h2 em,
 .approach-overlay h2 em,
