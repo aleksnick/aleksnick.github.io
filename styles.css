@@ -1221,10 +1221,6 @@ a {
     filter 300ms ease;
 }
 
-.talk-photo-close {
-  object-position: 34% center;
-}
-
 .talk-card:hover .talk-media > img,
 .talk-card:focus-within .talk-media > img {
   transform: scale(1.035);
