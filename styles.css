@@ -752,7 +752,7 @@ a {
 
 .project-index {
   position: relative;
-  z-index: 3;
+  z-index: 5;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -768,6 +768,8 @@ a {
   --preview-rotate: -2deg;
   --preview-hover-rotate: 0.6deg;
   --preview-shadow: rgba(237, 45, 31, 0.5);
+  --preview-scale: 0.7;
+  --preview-hover-scale: 0.71;
   position: absolute;
   top: 13%;
   right: -6%;
@@ -776,7 +778,8 @@ a {
   aspect-ratio: 4 / 3;
   margin: 0;
   overflow: hidden;
-  transform: rotate(var(--preview-rotate));
+  transform: rotate(var(--preview-rotate)) scale(var(--preview-scale));
+  transform-origin: top right;
   border: 1px solid rgba(255, 255, 255, 0.52);
   background: #08090a;
   box-shadow:
@@ -824,7 +827,7 @@ a {
 
 .project-card:hover .project-preview,
 .project-card:focus-within .project-preview {
-  transform: translate3d(-7px, -8px, 0) rotate(var(--preview-hover-rotate)) scale(1.015);
+  transform: translate3d(-7px, -8px, 0) rotate(var(--preview-hover-rotate)) scale(var(--preview-hover-scale));
   box-shadow:
     0 30px 70px rgba(0, 0, 0, 0.5),
     13px 13px 0 var(--preview-shadow);
@@ -838,7 +841,7 @@ a {
 
 .project-ghost {
   position: absolute;
-  z-index: -1;
+  z-index: 3;
   font: 900 clamp(120px, 17vw, 320px)/0.72 var(--display);
   letter-spacing: -0.09em;
   white-space: nowrap;
@@ -852,7 +855,7 @@ a {
 
 .project-copy {
   position: relative;
-  z-index: 3;
+  z-index: 4;
   max-width: 630px;
   margin-top: auto;
   padding-right: 74px;
@@ -917,7 +920,7 @@ a {
   position: absolute;
   right: clamp(24px, 3vw, 48px);
   bottom: clamp(24px, 3vw, 48px);
-  z-index: 4;
+  z-index: 5;
   display: grid;
   width: 62px;
   height: 62px;
@@ -960,10 +963,10 @@ a {
 }
 
 .project-trade .project-ghost {
-  top: 16%;
-  left: -4%;
+  top: 15%;
+  left: 38%;
   color: transparent;
-  opacity: 0.33;
+  opacity: 0.48;
   -webkit-text-stroke: 2px var(--paper);
 }
 
@@ -1011,9 +1014,11 @@ a {
 }
 
 .project-checks .project-ghost {
-  top: 18%;
-  left: -4%;
-  color: rgba(10, 8, 7, 0.09);
+  top: 14%;
+  left: 28%;
+  color: transparent;
+  opacity: 0.52;
+  -webkit-text-stroke: 2px var(--paper);
 }
 
 .project-checks .project-copy h3 {
@@ -1074,10 +1079,10 @@ a {
 }
 
 .project-lify .project-ghost {
-  top: 17%;
-  left: -5%;
+  top: 13%;
+  left: 28%;
   color: transparent;
-  opacity: 0.48;
+  opacity: 0.54;
   -webkit-text-stroke: 2px #fff;
 }
 
@@ -1145,9 +1150,12 @@ a {
 }
 
 .project-noiso .project-ghost {
-  top: 12%;
-  right: -2%;
-  color: rgba(241, 236, 226, 0.1);
+  top: 10%;
+  right: auto;
+  left: 25%;
+  color: transparent;
+  opacity: 0.5;
+  -webkit-text-stroke: 2px var(--paper);
 }
 
 .project-noiso .project-copy {
@@ -1219,10 +1227,10 @@ a {
 }
 
 .project-appnotes .project-ghost {
-  top: 12%;
-  left: -3%;
+  top: 10%;
+  left: 22%;
   color: transparent;
-  opacity: 0.34;
+  opacity: 0.5;
   -webkit-text-stroke: 2px #fff;
 }
 
@@ -1906,7 +1914,7 @@ a {
 
 .reveal-enabled .project-card:not(.is-visible) .project-preview {
   opacity: 0;
-  transform: translate3d(38%, -18%, 0) rotate(12deg) scale(0.86);
+  transform: translate3d(38%, -18%, 0) rotate(12deg) scale(0.6);
 }
 
 .reveal-enabled .project-card:not(.is-visible) .project-ghost {
@@ -2501,6 +2509,6 @@ a {
 
   .reveal-enabled .project-card:not(.is-visible) .project-preview {
     opacity: 1;
-    transform: rotate(var(--preview-rotate));
+    transform: rotate(var(--preview-rotate)) scale(var(--preview-scale));
   }
 }
