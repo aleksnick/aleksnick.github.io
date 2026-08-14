@@ -657,7 +657,7 @@ a {
 .project-card {
   --arrow-bg: var(--paper);
   --arrow-fg: var(--ink);
-  --copy-scrim: rgba(10, 8, 7, 0.88);
+  --copy-scrim: rgba(10, 8, 7, 0.7);
   --title-fill: var(--paper);
   --title-stroke: rgba(10, 8, 7, 0.92);
   position: relative;
@@ -797,10 +797,11 @@ a {
 
 .project-copy::before {
   position: absolute;
-  inset: -26px -54px -28px -28px;
+  inset: -72px -96px -52px -52px;
   z-index: -1;
-  background: linear-gradient(90deg, var(--copy-scrim) 0%, var(--copy-scrim) 54%, transparent 100%);
+  background: radial-gradient(ellipse 92% 100% at 18% 58%, var(--copy-scrim) 0 34%, transparent 78%);
   content: "";
+  filter: blur(10px);
   pointer-events: none;
 }
 
@@ -911,9 +912,11 @@ a {
   --preview-rotate: 2.2deg;
   --preview-hover-rotate: -0.5deg;
   --preview-shadow: var(--red);
-  top: 10%;
-  right: -9%;
-  width: 78%;
+  top: 9%;
+  right: -7%;
+  width: 88%;
+  height: 76%;
+  aspect-ratio: auto;
   box-shadow:
     0 28px 65px rgba(0, 0, 0, 0.52),
     11px 11px 0 var(--red);
@@ -934,7 +937,7 @@ a {
 .project-checks {
   --arrow-bg: var(--ink);
   --arrow-fg: var(--paper);
-  --copy-scrim: rgba(241, 236, 226, 0.92);
+  --copy-scrim: rgba(241, 236, 226, 0.8);
   --title-fill: var(--ink);
   --title-stroke: rgba(241, 236, 226, 0.96);
   grid-column: 8 / -1;
@@ -957,9 +960,11 @@ a {
   --preview-rotate: -3.2deg;
   --preview-hover-rotate: 0.4deg;
   --preview-shadow: var(--blue);
-  top: 10%;
-  right: -15%;
-  width: 78%;
+  top: 8%;
+  right: -10%;
+  width: 96%;
+  height: 82%;
+  aspect-ratio: auto;
   border-color: rgba(10, 8, 7, 0.42);
   box-shadow:
     0 22px 48px rgba(10, 8, 7, 0.3),
@@ -968,12 +973,6 @@ a {
 
 .project-checks .project-preview img {
   object-position: 58% center;
-}
-
-.project-checks .project-preview,
-.project-appnotes .project-preview {
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 24%, #000 100%);
-  mask-image: linear-gradient(90deg, transparent 0%, #000 24%, #000 100%);
 }
 
 .project-checks .project-copy {
@@ -991,7 +990,7 @@ a {
 .project-lify {
   --arrow-bg: #fff;
   --arrow-fg: var(--red);
-  --copy-scrim: rgba(166, 22, 20, 0.88);
+  --copy-scrim: rgba(166, 22, 20, 0.72);
   grid-column: 8 / -1;
   grid-row: 2;
   background: var(--red);
@@ -1026,9 +1025,11 @@ a {
   --preview-rotate: 3deg;
   --preview-hover-rotate: -0.5deg;
   --preview-shadow: rgba(255, 255, 255, 0.74);
-  top: 10%;
-  right: -15%;
-  width: 78%;
+  top: 8%;
+  right: -10%;
+  width: 96%;
+  height: 82%;
+  aspect-ratio: auto;
   box-shadow:
     0 24px 52px rgba(65, 3, 14, 0.42),
     9px 9px 0 rgba(255, 255, 255, 0.74);
@@ -1047,7 +1048,7 @@ a {
 }
 
 .project-noiso {
-  --copy-scrim: rgba(11, 61, 58, 0.9);
+  --copy-scrim: rgba(11, 61, 58, 0.74);
   grid-column: 1 / span 5;
   grid-row: 3;
   min-height: 520px;
@@ -1094,8 +1095,8 @@ a {
   --preview-hover-rotate: 0.45deg;
   --preview-shadow: var(--orange);
   top: 2%;
-  right: -2%;
-  width: 52%;
+  right: -4%;
+  width: 58%;
   aspect-ratio: 9 / 16;
   box-shadow:
     0 28px 58px rgba(0, 0, 0, 0.46),
@@ -1118,7 +1119,7 @@ a {
 .project-appnotes {
   --arrow-bg: var(--yellow);
   --arrow-fg: var(--ink);
-  --copy-scrim: rgba(18, 67, 190, 0.9);
+  --copy-scrim: rgba(18, 67, 190, 0.74);
   grid-column: 6 / -1;
   grid-row: 3;
   min-height: 520px;
@@ -1170,10 +1171,11 @@ a {
   --preview-rotate: 2.4deg;
   --preview-hover-rotate: -0.45deg;
   --preview-shadow: var(--yellow);
-  top: 3%;
+  top: 5%;
   right: -8%;
-  width: 70%;
-  aspect-ratio: 1;
+  width: 94%;
+  height: 84%;
+  aspect-ratio: auto;
   border-color: rgba(255, 255, 255, 0.78);
   box-shadow:
     0 25px 56px rgba(5, 17, 65, 0.44),
@@ -2080,15 +2082,15 @@ a {
   .project-checks .project-preview,
   .project-lify .project-preview,
   .project-appnotes .project-preview {
-    top: 68px;
-    right: -10%;
-    width: min(78%, 540px);
+    top: 58px;
+    right: -8%;
+    width: 92%;
   }
 
   .project-noiso .project-preview {
     top: 44px;
-    right: -2%;
-    width: min(52%, 320px);
+    right: -4%;
+    width: min(60%, 370px);
   }
 
   .project-checks .project-copy,
@@ -2263,15 +2265,15 @@ a {
   .project-checks .project-preview,
   .project-lify .project-preview,
   .project-appnotes .project-preview {
-    top: 72px;
+    top: 62px;
     right: -14%;
-    width: 84%;
+    width: 108%;
   }
 
   .project-noiso .project-preview {
     top: 56px;
-    right: -2%;
-    width: 54%;
+    right: -6%;
+    width: 62%;
   }
 
   .project-trade .project-copy,
