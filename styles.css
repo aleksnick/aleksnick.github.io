@@ -903,7 +903,7 @@ a {
 }
 
 .project-trade .project-preview img {
-  object-position: 76% center;
+  object-position: center;
 }
 
 .project-trade .project-description {
@@ -954,7 +954,7 @@ a {
 }
 
 .project-checks .project-preview img {
-  object-position: 78% center;
+  object-position: 58% center;
 }
 
 .project-checks .project-preview,
@@ -1021,7 +1021,7 @@ a {
 }
 
 .project-lify .project-preview img {
-  object-position: 79% center;
+  object-position: 60% center;
 }
 
 .project-lify .project-copy {
@@ -1078,17 +1078,17 @@ a {
   --preview-rotate: -2.5deg;
   --preview-hover-rotate: 0.45deg;
   --preview-shadow: var(--orange);
-  top: 8%;
-  right: -1%;
-  width: 43%;
-  aspect-ratio: 3 / 4;
+  top: 6%;
+  right: 2%;
+  width: 34%;
+  aspect-ratio: 9 / 16;
   box-shadow:
     0 28px 58px rgba(0, 0, 0, 0.46),
     9px 9px 0 var(--orange);
 }
 
 .project-noiso .project-preview img {
-  object-position: 79% center;
+  object-position: center 42%;
 }
 
 .project-noiso .project-tagline,
@@ -1154,9 +1154,10 @@ a {
   --preview-rotate: 2.4deg;
   --preview-hover-rotate: -0.45deg;
   --preview-shadow: var(--yellow);
-  top: 10%;
-  right: -4%;
-  width: 52%;
+  top: 6%;
+  right: -2%;
+  width: 44%;
+  aspect-ratio: 1;
   border-color: rgba(255, 255, 255, 0.78);
   box-shadow:
     0 25px 56px rgba(5, 17, 65, 0.44),
@@ -1164,7 +1165,7 @@ a {
 }
 
 .project-appnotes .project-preview img {
-  object-position: 78% center;
+  object-position: center;
 }
 
 .project-appnotes .project-copy {
@@ -2075,7 +2076,7 @@ a {
   .project-noiso .project-preview {
     top: 68px;
     right: 1%;
-    width: min(44%, 300px);
+    width: min(40%, 280px);
   }
 
   .project-checks .project-copy,
@@ -2254,7 +2255,7 @@ a {
   .project-noiso .project-preview {
     top: 72px;
     right: 2%;
-    width: 52%;
+    width: 46%;
   }
 
   .project-trade .project-copy,
