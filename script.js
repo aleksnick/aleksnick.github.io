@@ -76,6 +76,7 @@
   document.querySelectorAll(".video-trigger").forEach((trigger) => {
     trigger.addEventListener("click", (event) => {
       const videoId = trigger.dataset.videoId;
+      const start = Number.parseInt(trigger.dataset.videoStart || "", 10);
       const media = trigger.closest(".talk-media");
 
       if (!videoId || !media || !/^[\w-]{11}$/.test(videoId)) return;
@@ -84,6 +85,8 @@
 
       const player = document.createElement("iframe");
       const parameters = new URLSearchParams({ autoplay: "1", playsinline: "1", hl: "ru" });
+
+      if (Number.isSafeInteger(start) && start > 0) parameters.set("start", String(start));
 
       player.className = "talk-player";
       player.src = `https://www.youtube-nocookie.com/embed/${videoId}?${parameters}`;
