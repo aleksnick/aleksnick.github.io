@@ -842,6 +842,8 @@ a {
 .project-ghost {
   position: absolute;
   z-index: 3;
+  left: 0;
+  opacity: 0.24;
   font: 900 clamp(120px, 17vw, 320px)/0.72 var(--display);
   letter-spacing: -0.09em;
   white-space: nowrap;
@@ -964,9 +966,7 @@ a {
 
 .project-trade .project-ghost {
   top: 15%;
-  left: 38%;
   color: transparent;
-  opacity: 0.48;
   -webkit-text-stroke: 2px var(--paper);
 }
 
@@ -1015,9 +1015,7 @@ a {
 
 .project-checks .project-ghost {
   top: 14%;
-  left: 28%;
   color: transparent;
-  opacity: 0.52;
   -webkit-text-stroke: 2px var(--paper);
 }
 
@@ -1080,9 +1078,7 @@ a {
 
 .project-lify .project-ghost {
   top: 13%;
-  left: 28%;
   color: transparent;
-  opacity: 0.54;
   -webkit-text-stroke: 2px #fff;
 }
 
@@ -1152,9 +1148,7 @@ a {
 .project-noiso .project-ghost {
   top: 10%;
   right: auto;
-  left: 25%;
   color: transparent;
-  opacity: 0.5;
   -webkit-text-stroke: 2px var(--paper);
 }
 
@@ -1228,9 +1222,7 @@ a {
 
 .project-appnotes .project-ghost {
   top: 10%;
-  left: 22%;
   color: transparent;
-  opacity: 0.5;
   -webkit-text-stroke: 2px #fff;
 }
 
