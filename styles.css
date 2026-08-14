@@ -2318,6 +2318,7 @@ a {
   }
 
   .project-card a {
+    min-height: inherit;
     padding: 22px;
   }
 
@@ -2353,7 +2354,18 @@ a {
   .project-lify .project-copy,
   .project-noiso .project-copy,
   .project-appnotes .project-copy {
+    display: flex;
+    width: 100%;
     max-width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    flex: 1 1 auto;
+    flex-direction: column;
+  }
+
+  .project-copy .tag-list {
+    margin-top: auto;
+    padding-top: 26px;
   }
 
   .project-copy h3,
