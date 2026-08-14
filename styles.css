@@ -1413,6 +1413,8 @@ a {
   max-width: 100%;
   margin-left: clamp(0px, 8vw, 140px);
   color: transparent;
+  font-size: clamp(42px, 6.8vw, 128px);
+  letter-spacing: -0.045em;
   -webkit-text-stroke: 2px var(--paper);
 }
 
