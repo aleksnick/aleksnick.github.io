@@ -1238,8 +1238,8 @@ a {
   top: 5%;
   right: -8%;
   width: 94%;
-  height: 84%;
-  aspect-ratio: auto;
+  height: auto;
+  aspect-ratio: 1304 / 1216;
   border-color: rgba(255, 255, 255, 0.78);
   box-shadow:
     0 25px 56px rgba(5, 17, 65, 0.44),
@@ -1247,6 +1247,7 @@ a {
 }
 
 .project-appnotes .project-preview img {
+  object-fit: contain;
   object-position: center;
 }
 
