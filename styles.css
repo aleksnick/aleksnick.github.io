@@ -579,8 +579,51 @@ a {
   transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.portrait-poster-type {
+  position: absolute;
+  inset: 0 0 43px;
+  z-index: 3;
+  overflow: hidden;
+  pointer-events: none;
+  transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.portrait-poster-type b,
+.portrait-poster-type i {
+  position: absolute;
+  display: block;
+  font-family: var(--display);
+  font-style: normal;
+  font-weight: 900;
+  line-height: 0.72;
+  letter-spacing: -0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.portrait-poster-type b {
+  top: 4%;
+  left: 13%;
+  color: var(--paper);
+  font-size: clamp(170px, 18vw, 340px);
+  mix-blend-mode: difference;
+}
+
+.portrait-poster-type i {
+  bottom: 8%;
+  left: 3%;
+  color: rgba(241, 236, 226, 0.12);
+  font-size: clamp(68px, 6.4vw, 118px);
+  letter-spacing: -0.055em;
+  -webkit-text-stroke: 2px rgba(241, 236, 226, 0.92);
+}
+
 .portrait-poster:hover img {
   transform: scale(1.035);
+}
+
+.portrait-poster:hover .portrait-poster-type {
+  transform: translate3d(-8px, 4px, 0);
 }
 
 .portrait-poster figcaption {
@@ -588,7 +631,7 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 3;
+  z-index: 4;
   display: flex;
   padding: 17px 20px;
   align-items: center;
