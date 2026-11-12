@@ -30,9 +30,9 @@ Self-hosted preview deploys для статических SPA. GitHub Actions, S
 
 Встраиваемая панель приватных контекстных заметок для поддержки, QA и разработки. Заметки привязаны к клиенту и странице SPA и невидимы пользователям продукта.
 
-### [PushDocs](https://pushdocs.frontend.sndsy.ru/)
+### [PushDocs](https://pushdocs.github.io/)
 
-Редактор документации Docusaurus на своём сервере. Страницы из репозиториев GitHub и GitLab можно редактировать в браузере.
+CMS для Docusaurus на своём сервере. Редактор Markdown и MDX с предпросмотром страниц и отправкой правок на ревью в GitHub или GitLab.
 
 ### [GetException](https://getexception.github.io/)
 

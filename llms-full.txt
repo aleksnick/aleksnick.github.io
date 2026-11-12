@@ -71,9 +71,9 @@
 
 ### PushDocs
 
-- URL: https://pushdocs.frontend.sndsy.ru/
-- Назначение: Редактор документации Docusaurus на своём сервере.
-- Возможности: Страницы из репозиториев GitHub и GitLab можно редактировать в браузере.
+- URL: https://pushdocs.github.io/
+- Назначение: CMS для Docusaurus на своём сервере.
+- Возможности: Редактор Markdown и MDX с предпросмотром страниц и отправкой правок на ревью в GitHub или GitLab.
 
 ### GetException
 

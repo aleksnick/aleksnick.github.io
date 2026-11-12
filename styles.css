@@ -2384,6 +2384,11 @@ a {
     width: 62%;
   }
 
+  .project-pushdocs .project-preview {
+    right: 5%;
+    width: 118%;
+  }
+
   .project-trade .project-copy,
   .project-checks .project-copy,
   .project-lify .project-copy,
