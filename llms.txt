@@ -15,6 +15,8 @@
 - [Selflify](https://selflify.github.io/): self-hosted preview deploys для статических SPA через GitHub Actions, SSH и rsync
 - [Noiso](https://noiso.app/): минималистичное iOS-приложение с офлайн-звуками и таймером сна
 - [AppNotes](https://appnotes.tech/): приватные контекстные заметки внутри SPA для поддержки, QA и разработки
+- [PushDocs](https://pushdocs.frontend.sndsy.ru/): редактор документации Docusaurus на своём сервере
+- [GetException](https://getexception.github.io/): мониторинг ошибок на своём сервере
 
 ## Записи выступлений
 
