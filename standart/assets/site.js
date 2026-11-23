@@ -47,7 +47,7 @@ if (directory) {
   const directoryIndex = entries.map((entry) => normalize(entry.textContent));
 
   function updateDirectory() {
-    const words = normalize(input.value.trim()).split(/\s+/).filter(Boolean);
+    const words = input ? normalize(input.value.trim()).split(/\s+/).filter(Boolean) : [];
     let matched = 0;
     entries.forEach((entry, index) => {
       const matches = (filter === "all" || entry.dataset.sector === filter) &&
@@ -58,9 +58,9 @@ if (directory) {
     filters.forEach((button) => {
       button.setAttribute("aria-pressed", String(button.dataset.filter === filter));
     });
-    status.textContent = matched ? `Показано ${Math.min(limit, matched)} из ${matched}` : "";
-    empty.hidden = matched > 0;
-    more.hidden = matched <= limit;
+    if (status) status.textContent = matched ? `Показано ${Math.min(limit, matched)} из ${matched}` : "";
+    if (empty) empty.hidden = matched > 0;
+    if (more) more.hidden = matched <= limit;
   }
 
   function resetDirectory() {
@@ -68,21 +68,23 @@ if (directory) {
     updateDirectory();
   }
 
-  input.addEventListener("input", resetDirectory);
+  input?.addEventListener("input", resetDirectory);
   filters.forEach((button) => {
     button.addEventListener("click", () => {
       filter = button.dataset.filter;
       resetDirectory();
     });
   });
-  more.addEventListener("click", () => {
+  more?.addEventListener("click", () => {
     const previous = entries.filter((entry) => !entry.hidden).length;
     limit += chunk;
     updateDirectory();
     const next = entries.filter((entry) => !entry.hidden)[previous];
     if (next) next.focus({ preventScroll: true });
   });
-  directory.querySelector(".searchbox").hidden = false;
+  directory.querySelectorAll(".searchbox, .directory-filters").forEach((control) => {
+    control.hidden = false;
+  });
   updateDirectory();
 }
 
@@ -100,5 +102,5 @@ if ("IntersectionObserver" in window && !reducedMotion.matches) {
     });
   }, { threshold: .17 });
 
-  document.querySelectorAll(".section-head, .solutions-layout > *, .launch-layout > *, .program-group, .inquiry").forEach((item) => entrances.observe(item));
+  document.querySelectorAll(".section-head, .launch-layout > *, .program-group, .inquiry").forEach((item) => entrances.observe(item));
 }
