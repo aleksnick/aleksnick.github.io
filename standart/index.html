@@ -3,15 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f5f7fb">
+<meta name="theme-color" content="#142952">
 <title>Автоматизация торговли и аптек | Стандарт-Н</title>
 <meta name="description" content="Программы для автоматизации магазинов, аптек и торговых сетей. Касса, товарный учёт, закупки и управление сетью.">
 <link rel="canonical" href="https://aleksnick.github.io/standart/">
 <link rel="icon" href="/standart/assets/favicon.png" sizes="32x32" type="image/png">
 <link rel="stylesheet" href="/standart/assets/site.css?v=editorial-layouts">
+<link rel="stylesheet" href="/standart/assets/storefront.css?v=1">
 <script defer src="/standart/assets/site.js?v=migration"></script>
 </head>
-<body class="theme-home">
+<body class="theme-home storefront">
 <a class="skip" href="#main">К содержанию</a>
 <header class="header"><div class="wrap header-inner">
 <a class="brand" href="/standart/"><img src="/standart/assets/logo.png" width="288" height="66" alt="Стандарт-Н"></a>
@@ -20,40 +21,40 @@
 <details class="mobile-nav"><summary>Меню <i aria-hidden="true"></i></summary><nav aria-label="Основное меню"><a href="/standart/konfiguracii/">Решения</a><a href="/standart/programmy/">Программы</a><a href="/standart/poleznoe/">Поддержка</a><a href="/standart/news/">Блог</a><a href="/standart/kontakty/">Контакты</a><a href="/standart/demo-versiya/">Запросить демо</a></nav></details>
 </div></header>
 <main id="main">
-<section class="hero"><div class="wrap hero-inner">
+<section class="hero storefront-hero"><div class="hero-inner">
   <div class="hero-copy">
     <p class="eyebrow"><i></i>Автоматизация магазинов, аптек и торговых сетей</p>
-    <h1>Касса и учёт <em>в одной системе</em></h1>
-    <p>Продажа на кассе сразу меняет остаток. Товаровед видит, что нужно заказать, а руководитель — как работают точки. Подберём программы и настроим их под ваш магазин.</p>
+    <h1>Один чек. <em>Вся сеть в курсе.</em></h1>
+    <p>Продажа на кассе сразу меняет остаток. Товаровед видит, что нужно заказать, а руководитель получает данные по всем точкам.</p>
     <div class="actions">
       <a href="/standart/demo-versiya/" class="button">Запросить демо<span aria-hidden="true">↗</span></a>
       <a href="#solutions" class="textlink">Выбрать свою отрасль<span aria-hidden="true">↓</span></a>
     </div>
   </div>
-  <div class="showroom" aria-label="Сценарии работы" data-showroom>
+  <div class="showroom" role="region" aria-label="Как связаны касса, склад и офис" data-showroom>
     <div class="showroom-controls" role="group" aria-label="Выбрать сценарий" hidden>
-      <button type="button" aria-controls="scene-till" aria-pressed="true">Касса</button>
-      <button type="button" aria-controls="scene-stock" aria-pressed="false">Склад</button>
-      <button type="button" aria-controls="scene-office" aria-pressed="false">Офис сети</button>
+      <button type="button" aria-controls="scene-till" aria-pressed="true"><span aria-hidden="true">01</span> Касса</button>
+      <button type="button" aria-controls="scene-stock" aria-pressed="false"><span aria-hidden="true">02</span> Склад</button>
+      <button type="button" aria-controls="scene-office" aria-pressed="false"><span aria-hidden="true">03</span> Офис сети</button>
     </div>
     <figure class="showroom-scene" id="scene-till">
       <img src="/standart/assets/pharmacy.jpg" alt="Провизор сканирует товар на кассе в аптеке" width="1440" height="1080" fetchpriority="high">
       <figcaption>
-        <span class="scene-caption"><small>АРМ Кассир</small><strong>После чека остаток обновляется</strong></span>
+        <div class="scene-caption"><small>Кассовый чек</small><strong>После чека остаток обновляется</strong><div class="receipt-status"><span>Продажа</span><span>В учёте</span></div><span class="receipt-program">АРМ Кассир</span></div>
         <a href="/standart/arm-kassir/" aria-label="Подробнее об АРМ Кассир">↗</a>
       </figcaption>
     </figure>
     <figure class="showroom-scene" id="scene-stock" hidden>
       <img src="/standart/assets/stock.jpg" alt="Сотрудник сканирует товар на складе магазина" width="1200" height="800" loading="lazy">
       <figcaption>
-        <span class="scene-caption"><small>АРМ Менеджер</small><strong>Приёмка отражается в остатках</strong></span>
+        <div class="scene-caption"><small>Приёмка товара</small><strong>Приёмка отражается в остатках</strong><div class="receipt-status"><span>Остатки</span><span>Обновлены</span></div><span class="receipt-program">АРМ Менеджер</span></div>
         <a href="/standart/arm-menedzher/" aria-label="Подробнее об АРМ Менеджер">↗</a>
       </figcaption>
     </figure>
     <figure class="showroom-scene" id="scene-office" hidden>
       <img src="/standart/assets/head-office.jpg" alt="Руководитель торговой сети сверяет записи за рабочим столом" width="1200" height="900" loading="lazy">
       <figcaption>
-        <span class="scene-caption"><small>Сводный менеджер</small><strong>Показатели всех точек в одном месте</strong></span>
+        <div class="scene-caption"><small>Сводка по сети</small><strong>Показатели всех точек в одном месте</strong><div class="receipt-status"><span>Данные точек</span><span>Собраны</span></div><span class="receipt-program">Сводный менеджер</span></div>
         <a href="/standart/svodnyy-menedzher/" aria-label="Подробнее о Сводном менеджере">↗</a>
       </figcaption>
     </figure>
@@ -141,7 +142,7 @@
 </a>
 </div>
 </div></section>
-<section class="section"><div class="wrap"><div class="inquiry"><div><h2>Покажем на вашем примере</h2><p>Расскажите, где сейчас ведёте учёт и что хотите упростить. Подготовим демонстрацию на примере вашей задачи.</p></div><div class="actions"><a href="/standart/demo-versiya/" class="button">Запросить демо<span aria-hidden="true">↗</span></a><a class="textlink" href="tel:+78002508238">8 800 250‑82‑38 <span aria-hidden="true">↗</span></a></div></div></div></section>
+<section class="section storefront-close"><div class="wrap"><div class="inquiry"><div><h2>Покажем на вашем примере</h2><p>Расскажите, где сейчас ведёте учёт и что хотите упростить. Подготовим демонстрацию на примере вашей задачи.</p></div><div class="actions"><a href="/standart/demo-versiya/" class="button">Запросить демо<span aria-hidden="true">↗</span></a><a class="textlink" href="tel:+78002508238">8 800 250‑82‑38 <span aria-hidden="true">↗</span></a></div></div></div></section>
 </main>
 <footer class="footer">
 <div class="wrap footer-main">
