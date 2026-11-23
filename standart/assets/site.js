@@ -88,6 +88,54 @@ if (directory) {
   updateDirectory();
 }
 
+document.querySelectorAll("[data-demo-form]").forEach((form) => {
+  const result = form.parentElement.querySelector("[data-demo-result]");
+  const restart = result.querySelector("[data-demo-restart]");
+  const phone = form.elements.namedItem("phone");
+  const message = form.elements.namedItem("message");
+  const logo = form.elements.namedItem("logo");
+
+  form.addEventListener("input", (event) => {
+    event.target.setCustomValidity?.("");
+  });
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const name = form.elements.namedItem("name");
+    if (!name.value.trim()) {
+      name.setCustomValidity("Введите ваше имя.");
+      name.reportValidity();
+      return;
+    }
+    if (phone && phone.value.replace(/\D/g, "").length < 7) {
+      phone.setCustomValidity("Введите номер телефона с кодом города или оператора.");
+      phone.reportValidity();
+      return;
+    }
+    if (form.dataset.feedbackKind === "review" && message.value.trim().length < 10) {
+      message.setCustomValidity("Расскажите о вашем опыте, используя не менее 10 символов.");
+      message.reportValidity();
+      return;
+    }
+    if (logo?.files[0]?.size > 5 * 1024 * 1024) {
+      logo.setCustomValidity("Выберите изображение размером до 5 МБ.");
+      logo.reportValidity();
+      return;
+    }
+    form.reset();
+    form.hidden = true;
+    result.hidden = false;
+    result.focus();
+  });
+
+  restart.addEventListener("click", () => {
+    result.hidden = true;
+    form.hidden = false;
+    form.elements.namedItem("name").focus();
+  });
+  form.hidden = false;
+});
+
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 if ("IntersectionObserver" in window && !reducedMotion.matches) {
   const entrances = new IntersectionObserver((records, observer) => {

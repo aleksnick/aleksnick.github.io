@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f5f7fb">
+<title>Алгоритм работы автозаказа | Стандарт-Н</title>
+<meta name="description" content="Публикация из архива Стандарт‑Н.">
+<link rel="canonical" href="https://aleksnick.github.io/standart/news/algoritm-raboty-avtozakaza/">
+<link rel="icon" href="/standart/assets/favicon.png" sizes="32x32" type="image/png">
+<link rel="stylesheet" href="/standart/assets/site.css?v=migration">
+<script defer src="/standart/assets/site.js?v=migration"></script>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<header class="header"><div class="wrap header-inner">
+<a class="brand" href="/standart/"><img src="/standart/assets/logo.png" width="288" height="66" alt="Стандарт-Н"></a>
+<nav class="desktop-nav" aria-label="Основное меню"><a href="/standart/konfiguracii/">Решения</a><a href="/standart/programmy/">Программы</a><a href="/standart/poleznoe/">Поддержка</a><a href="/standart/news/">Блог</a><a href="/standart/kontakty/">Контакты</a></nav>
+<div class="header-actions"><a class="header-phone" href="tel:+78002508238">8 800 250‑82‑38</a><a href="/standart/demo-versiya/" class="button">Демо<span aria-hidden="true">↗</span></a></div>
+<details class="mobile-nav"><summary>Меню <i aria-hidden="true"></i></summary><nav aria-label="Основное меню"><a href="/standart/konfiguracii/">Решения</a><a href="/standart/programmy/">Программы</a><a href="/standart/poleznoe/">Поддержка</a><a href="/standart/news/">Блог</a><a href="/standart/kontakty/">Контакты</a><a href="/standart/demo-versiya/">Запросить демо</a></nav></details>
+</div></header>
+<main id="main">
+<section class="page-intro"><div class="wrap"><div class="breadcrumb"><a href="/standart/">Главная</a><span aria-hidden="true">/</span><a href="/standart/news/">Блог</a></div><p class="archive-date">21.05.2018</p><h1>Алгоритм работы автозаказа</h1></div></section><section class="section"><div class="wrap"><article class="article-body">
+
+
+<div><div><div><ol>
+<li>Автоматическое приведение наименований</li>
+</ol>
+<p>Привидение наименований производится непосредственно перед расчёта, и включается в себя следующее:</p>
+<ul>
+<li>Сведение наименований через глобальный справочник (если он подключен);</li>
+<li>Сведение по заводским штрих-кодам (при активной опции "Приводить по штрихкоду").</li>
+</ul>
+<p>Количество товаров, приведённых к одному наименованию автоматически суммируется.</p>
+<ol>
+<li>Работа алгоритма осуществляется согласно параметрам в настройках.</li>
+</ol>
+<ul>
+<li>Сначала анализируются продажи за последние X дней (по умолчанию 30). В том случае, если выбрана опция "Анализировать предыдущий год", анализ так же будет включать в себя период годом ранее;</li>
+<li>Если на остатках колличество товаров достаточно на Y дней (по умолчанию 7), позиция не будет заказана. В противном случа товар будет заказан на срок Z дней (по умолчанию 10);</li>
+<li>Значение параметра "Минимум документов продаж" (по умолчанию 1) рассчитывается в зависимости от количества продаж за определённый период. Заказ не производится в том случае, если количество продаж меньше указанного числа.</li>
+<li>Дополнительно в ходе расчета автозаказа будут проанализированы все накладные, включая не проведенные приходы от поставщиков или перемещения, а также отправленные заказы за последние N дней (по умолчанию 7).</li>
+</ul>
+<p>Каждый параметр можно настроить индивидуально.</p>
+<ol>
+<li>Округление:</li>
+</ol>
+<p>По-умолчанию округление в программе осуществляется по следующим правилам:</p>
+<ul>
+<li>В случае, если товар есть на остатках,  количество к заказу округляется математически (например 0,3 до 0, а 0,7 до 1);</li>
+<li>Если товар на остатках отсутствует - округление будет производится в большую сторону (например 0,3 до 1, и 0,7 до 1).</li>
+</ul>
+<ol>
+<li>Минимум - максимум:</li>
+</ol>
+<p>Максимальное и минимальное значение устанавливается для позиции в активном заказе.</p>
+<ul>
+<li>В случае, если заказ позиции согласно алгоритму был рассчитан меньше минимального значения, он будет "подтянут" до минимального;</li>
+<li>Если же рассчитаный заказ превысил максимальное значение, он будет автоматически "обрезан" до  этого числа.</li>
+</ul>
+<p>Таким образом инструмент автозаказа позволяет дополнительно поддерживать широкий ассортимент и ограничивать заказ позиций в случае разового всплеска продаж.</p>
+<ol>
+<li>Дополнительные опции:</li>
+</ol>
+<p>Настройки автозаказа включа.т в себя следующие доп. опции "Не, заказывать, если остаток больше заказа" и "Не заказывать, если остаток больше минимального".</p>
+<p>Настройки так же позволяют указывать в опциях, какие документы необходимо  считать:</p>
+<ul>
+<li>приход: по умолчанию "приход от поставщика", "приход перемещением" и "оприходование товаров";</li>
+<li>расход: по умолчанию "чек ккм" и "расход оптовый";</li>
+<li>заказ: по умолчанию "заказ оптовику".</li>
+</ul>
+<ol>
+<li>При работе с программой "Общий заказ" и, в случае, если используется документ "Заказ оптовику":</li>
+</ol>
+<ul>
+<li>Ранее заказанные позиции исключаются из итогового результата. К ним относятся позиции, которые найдены в отправленных заказах, и не найдены в документах прихода).</li>
+<li>Если наименование найдено в активном заказе, заказ данной позиции не производится.</li>
+</ul>
+</div></div></div> </article></div></section>
+</main>
+<footer class="footer">
+<div class="wrap footer-main">
+  <div><a class="brand" href="/standart/"><img src="/standart/assets/logo.png" width="288" height="66" alt="Стандарт-Н"></a><p>Программы для розничной торговли, аптек и медицинских организаций.</p></div>
+  <div><h2>Компания</h2><a href="/standart/o-nas/">О нас</a><a href="/standart/news/">Блог</a><a href="/standart/reviews/">Отзывы</a><a href="/standart/vakansii/">Вакансии</a></div>
+  <div><h2>Клиентам</h2><a href="/standart/demo-versiya/">Демо-версия</a><a href="/standart/instrukcii/">Инструкции</a><a href="/standart/tehnicheskie-trebovaniya/">Технические требования</a><a href="/standart/stoimost/">Цены</a></div>
+  <div><h2>Связаться</h2><a href="tel:+78002508238">8 800 250‑82‑38</a><a href="mailto:office@standart-n.ru">office@standart-n.ru</a><a href="https://help.st-n.ru/">Техподдержка ↗</a></div>
+</div>
+<div class="wrap footer-bottom"><span>Стандарт‑Н · Ижевск</span><a href="/standart/kontakty/">Контактная информация</a><a href="#main">Наверх ↑</a></div>
+</footer>
+</body>
+</html>

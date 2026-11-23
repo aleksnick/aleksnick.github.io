@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f5f7fb">
 <title>Оставить заявку | Стандарт-Н</title>
-<meta name="description" content="Выберите, куда направить обращение по программам Стандарт‑Н.">
+<meta name="description" content="Форма для обращения в отдел продаж Стандарт‑Н.">
 <link rel="canonical" href="https://aleksnick.github.io/standart/ostavit-zayavku/">
 <link rel="icon" href="/standart/assets/favicon.png" sizes="32x32" type="image/png">
-<link rel="stylesheet" href="/standart/assets/site.css">
-<script defer src="/standart/assets/site.js"></script>
+<link rel="stylesheet" href="/standart/assets/site.css?v=migration">
+<script defer src="/standart/assets/site.js?v=migration"></script>
 </head>
 <body>
 <a class="skip" href="#main">К содержанию</a>
@@ -19,13 +19,26 @@
 <div class="header-actions"><a class="header-phone" href="tel:+78002508238">8 800 250‑82‑38</a><a href="/standart/demo-versiya/" class="button">Демо<span aria-hidden="true">↗</span></a></div>
 <details class="mobile-nav"><summary>Меню <i aria-hidden="true"></i></summary><nav aria-label="Основное меню"><a href="/standart/konfiguracii/">Решения</a><a href="/standart/programmy/">Программы</a><a href="/standart/poleznoe/">Поддержка</a><a href="/standart/news/">Блог</a><a href="/standart/kontakty/" aria-current="page">Контакты</a><a href="/standart/demo-versiya/">Запросить демо</a></nav></details>
 </div></header>
-<main id="main"><section class="page-intro"><div class="wrap">
-    <div class="breadcrumb"><a href="/standart/">Главная</a></div>
-    <h1>Оставить заявку</h1><p>Для знакомства с программой обратитесь в отдел продаж. По работающей программе пишите в техподдержку.</p>
-    </div></section><section class="section"><div class="wrap contact-layout">
-<div class="contact-lead"><p class="eyebrow"><i></i>Подбор программы и демонстрация</p><h2>Отдел продаж</h2><a class="contact-number" href="tel:+78002508238">8 800 250‑82‑38</a><a class="textlink" href="mailto:office@standart-n.ru">office@standart-n.ru</a><div class="actions"><a href="https://standart-n.ru/ostavit-zayavku" class="button">Оставить заявку<span aria-hidden="true">↗</span></a></div></div>
-<div class="contact-support"><p class="eyebrow"><i></i>По действующим программам</p><h2>Техподдержка</h2><a class="contact-number" href="tel:+73412338238">8 (3412) 338‑238</a><p>Пн–пт, 07:00–18:00. Сб–вс, 07:30–16:00 по Москве.</p><a href="https://help.st-n.ru/" class="textlink">Портал поддержки<span aria-hidden="true">↗</span></a></div>
-</div></section></main>
+<main id="main">
+<section class="page-intro"><div class="wrap"><div class="breadcrumb"><a href="/standart/">Главная</a></div><h1>Оставить заявку</h1><p>Подбор программы, внедрение или вопрос о работе Стандарт‑Н.</p></div></section><section class="section"><div class="wrap feedback-layout">
+<div class="feedback-info"><p class="eyebrow"><i></i>Стандарт‑Н</p><h2>Расскажите о вашей задаче</h2><p>Укажите, какое у вас производство или торговая точка, и что хотите посмотреть в программе.</p><a class="textlink" href="tel:+78002508238">8 800 250‑82‑38 <span aria-hidden="true">↗</span></a>
+<p>Если нужна помощь с уже установленной программой, воспользуйтесь <a class="inline-link" href="https://help.st-n.ru/">порталом техподдержки</a>.</p></div>
+<div class="feedback-panel"><p class="feedback-mode">Демонстрационная форма</p>
+<form data-demo-form data-feedback-kind="request" hidden>
+<div class="feedback-fields">
+<div class="feedback-field"><label for="request-name">Ваше имя</label><input id="request-name" name="name" autocomplete="name" maxlength="100" required></div>
+<div class="feedback-field"><label for="request-phone">Телефон</label><input id="request-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="32" required></div>
+<div class="feedback-field"><label for="request-email">Электронная почта</label><input id="request-email" name="email" type="email" autocomplete="email" maxlength="120"></div>
+<div class="feedback-field"><label for="request-type">Тип бизнеса</label><select id="request-type" name="type"><option value="">Выберите вариант</option><option>Один магазин или аптека</option><option>Торговая сеть</option><option>Другое</option></select></div>
+</div>
+<div class="feedback-field"><label for="request-message">Что хотите обсудить?</label><textarea id="request-message" name="message" rows="4" maxlength="2000" placeholder="Например, хотим посмотреть учёт остатков для двух аптек"></textarea></div>
+<label class="feedback-consent"><input type="checkbox" required><span>Я ознакомился с <a class="inline-link" href="/standart/politika-konfidencialnosti/">политикой обработки персональных данных</a>.</span></label>
+<div class="feedback-actions"><button class="button" type="submit">Оставить заявку<span aria-hidden="true">↗</span></button><p>Данные остаются в браузере.</p></div>
+</form>
+<div class="feedback-result" data-demo-result hidden tabindex="-1"><h3>Проверка заполнения пройдена</h3><p>Вы завершили демонстрацию заявки.</p><button class="button button-outline" type="button" data-demo-restart>Заполнить снова</button></div>
+<noscript><p>Для просмотра демонстрации включите JavaScript.</p></noscript>
+</div></div></section>
+</main>
 <footer class="footer">
 <div class="wrap footer-main">
   <div><a class="brand" href="/standart/"><img src="/standart/assets/logo.png" width="288" height="66" alt="Стандарт-Н"></a><p>Программы для розничной торговли, аптек и медицинских организаций.</p></div>
