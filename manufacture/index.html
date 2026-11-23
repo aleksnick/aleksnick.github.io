@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#142653">
+  <meta name="description" content="Стандарт‑Н автоматизирует мебельные, швейные и другие производства. Технологические карты, планирование, задания цеха, склад и контроль качества.">
+  <title>Автоматизация производства — Стандарт‑Н</title>
+  <link rel="canonical" href="https://aleksnick.github.io/manufacture/">
+  <link rel="icon" href="mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="page.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">К содержанию</a>
+  <header class="header" id="top">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top"><img src="mark.svg" width="38" height="38" alt="">Стандарт‑Н</a>
+      <nav aria-label="Разделы страницы">
+        <a href="#processes">Возможности</a>
+        <a href="#industries">Отрасли</a>
+        <a href="#implementation">Внедрение</a>
+      </nav>
+      <a class="button button-outline header-contact" href="#contact">Обсудить проект <span aria-hidden="true">↗</span></a>
+      <button class="menu-trigger" id="menu-open" type="button" aria-haspopup="dialog" aria-controls="menu-panel" aria-expanded="false" hidden>
+        <span>Меню</span>
+        <svg class="menu-glyph" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <path pathLength="1" d="M6 24V11a4 4 0 0 1 4-4h7a4 4 0 0 1 4 4v10h5"/>
+          <circle cx="6" cy="24" r="2.3"/><circle cx="26" cy="21" r="2.3"/>
+          <path d="M13 11h8m-8 5h8"/>
+        </svg>
+      </button>
+    </div>
+    <dialog id="menu-panel" class="menu-panel" aria-labelledby="menu-heading">
+      <div class="menu-top">
+        <h2 id="menu-heading">Разделы страницы</h2>
+        <button class="menu-close" id="menu-close" type="button" aria-label="Закрыть меню" autofocus>
+          <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M7 7l18 18M25 7 7 25"/><circle cx="7" cy="7" r="2"/><circle cx="25" cy="25" r="2"/></svg>
+        </button>
+      </div>
+      <nav aria-label="Навигация на мобильном">
+        <ol>
+          <li><a href="#route">Маршрут заказа <span aria-hidden="true">↘</span></a></li>
+          <li><a href="#processes">Возможности <span aria-hidden="true">↘</span></a></li>
+          <li><a href="#industries">Отрасли <span aria-hidden="true">↘</span></a></li>
+          <li><a href="#implementation">Внедрение <span aria-hidden="true">↘</span></a></li>
+        </ol>
+      </nav>
+      <a class="button button-primary" href="#contact">Обсудить проект <span aria-hidden="true">↗</span></a>
+    </dialog>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-heading">
+      <img class="factory-image" src="factory.jpg" width="1800" height="1013" fetchpriority="high" alt="">
+      <div class="wrap hero-inner">
+        <div class="hero-content">
+          <p class="eyebrow"><i></i> Автоматизация производства</p>
+          <h1 id="hero-heading"><span>От чертежа</span><em>до выпуска</em></h1>
+          <p class="hero-description">Свяжем технологов, склад и цех. В каждом заказе будет видно, что уже сделано, где возникла задержка и успевает ли производство к сроку.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#contact">Обсудить проект <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#route">Пройти по маршруту <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+        <a class="hero-marker" href="#route">
+          <span class="marker-icon"><svg aria-hidden="true" focusable="false"><use href="icons.svg#tech-card"></use></svg></span>
+          <span><small>Пример маршрута</small>Партия корпусов</span>
+          <span aria-hidden="true">↘</span>
+        </a>
+      </div>
+    </section>
+    <section class="wrap section route-section" id="route" aria-labelledby="route-heading">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow"><i></i> Маршрут заказа</p>
+          <h2 id="route-heading">Как чертёж становится изделием</h2>
+        </div>
+        <p>Проведите партию мебельных корпусов по пяти этапам. На каждом видно, какие данные получает следующий участок.</p>
+      </div>
+      <div class="route-layout">
+        <figure class="route-photo">
+          <img src="routing.jpg" width="1150" height="766" loading="lazy" alt="Фреза станка над панелью с отверстиями">
+          <figcaption><span>Партия корпусов</span><span>Операция · сверление</span></figcaption>
+          <div class="route-progress" hidden aria-hidden="true">
+            <span id="route-state">Этап 01 / 05</span><span class="route-meter"><i></i></span>
+          </div>
+        </figure>
+        <div class="route-list">
+          <details name="order-route" open>
+            <summary><span class="route-number">01</span><span>Заказ</span></summary>
+            <p>Мастер видит, сколько корпусов нужно выпустить, к какому сроку и по какой версии чертежа.</p>
+          </details>
+          <details name="order-route">
+            <summary><span class="route-number">02</span><span>Технологическая карта</span></summary>
+            <p>Технолог задаёт размеры деталей, порядок операций, нормы расхода и параметры обработки.</p>
+          </details>
+          <details name="order-route">
+            <summary><span class="route-number">03</span><span>Материалы</span></summary>
+            <p>Склад резервирует ЛДСП, кромку и фурнитуру по спецификации. Мастер заранее видит, каких материалов не хватает.</p>
+          </details>
+          <details name="order-route">
+            <summary><span class="route-number">04</span><span>Задания цеха</span></summary>
+            <p>Участки получают задания на раскрой, кромление, сверление и сборку. По завершении отмечают выпуск и расход.</p>
+          </details>
+          <details name="order-route">
+            <summary><span class="route-number">05</span><span>Приёмка и выпуск</span></summary>
+            <p>Контролёр проверяет комплектность и геометрию корпусов. Готовые изделия и детали на доработку учитываются в заказе.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+    <section class="process-section" id="processes">
+      <div class="wrap section">
+        <div class="section-head">
+          <h2>Что автоматизируем</h2>
+          <p>Свяжем работу технолога, склада, мастера и отдела качества данными по каждому заказу.</p>
+        </div>
+        <div class="process-layout">
+          <div class="process-list">
+            <article><span class="icon"><svg aria-hidden="true" focusable="false"><use href="icons.svg#tech-card"></use></svg></span><div><h3>Технологические карты</h3><p>Материалы, нормы расхода, оборудование и операции. Цех получает актуальную версию карты вместе с заданием.</p></div></article>
+            <article><span class="icon"><svg aria-hidden="true" focusable="false"><use href="icons.svg#schedule"></use></svg></span><div><h3>Планирование</h3><p>Распределяйте заказы по участкам и сменам с учётом сроков, загрузки и готовности материалов.</p></div></article>
+            <article><span class="icon"><svg aria-hidden="true" focusable="false"><use href="icons.svg#warehouse"></use></svg></span><div><h3>Материалы и склад</h3><p>Рассчитывайте потребность по спецификациям, резервируйте остатки и фиксируйте фактический расход.</p></div></article>
+            <article><span class="icon"><svg aria-hidden="true" focusable="false"><use href="icons.svg#tasks"></use></svg></span><div><h3>Задания цеха</h3><p>Выдавайте задания по операциям. Мастера видят очередь работ и отмечают выпуск, простой и причины задержек.</p></div></article>
+            <article><span class="icon"><svg aria-hidden="true" focusable="false"><use href="icons.svg#quality"></use></svg></span><div><h3>Контроль качества</h3><p>Назначайте контрольные операции, фиксируйте дефекты и отслеживайте, куда вернули партию на доработку.</p></div></article>
+            <article><span class="icon"><svg aria-hidden="true" focusable="false"><use href="icons.svg#chart"></use></svg></span><div><h3>Аналитика производства</h3><p>Сравнивайте план с фактом по срокам, выпуску, расходу и трудозатратам. Разбирайте отклонения по заказам.</p></div></article>
+          </div>
+          <figure class="process-photo">
+            <div class="process-photo-frame">
+              <img src="workbench.jpg" width="900" height="1200" loading="lazy" alt="Рука технолога над чертежом рядом со штангенциркулем и образцом фанеры">
+            </div>
+            <figcaption>Рабочий стол технолога</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <section class="industry-section" id="industries">
+      <div class="section-seam seam-in" aria-hidden="true"></div>
+      <div class="wrap industry">
+        <div class="industry-intro">
+          <div>
+            <div class="eyebrow"><i></i> Отраслевые примеры</div>
+            <h2>У каждого цеха свой маршрут</h2>
+          </div>
+          <p>Выберите производство, чтобы посмотреть, из каких операций складывается технологическая карта.</p>
+        </div>
+        <div class="industry-controls" role="group" aria-label="Выбрать отрасль">
+          <button type="button" class="industry-button" data-industry="furniture" aria-controls="furniture" aria-pressed="true">
+            Мебельное производство
+          </button>
+          <button type="button" class="industry-button" data-industry="clothing" aria-controls="clothing" aria-pressed="false">
+            Швейное производство
+          </button>
+          <button type="button" class="industry-button" data-industry="assembly" aria-controls="assembly" aria-pressed="false">
+            Сборочное производство
+          </button>
+        </div>
+        <div class="industry-examples">
+          <article class="tech-card" id="furniture">
+            <figure class="industry-scene">
+              <img src="furniture.jpg" width="900" height="600" loading="lazy" alt="Мастер проверяет размер деревянной детали корпуса">
+            </figure>
+            <div class="tech-details">
+              <header>
+                <div class="tech-header"><span>Пример технологической карты</span><span>МЕБЕЛЬ</span></div>
+                <h3>Корпус тумбы</h3><p class="materials">ЛДСП · кромка · фурнитура</p>
+              </header>
+              <ol><li><strong>Раскрой</strong><span>Размеры деталей и карта раскроя</span></li><li><strong>Кромление и сверление</strong><span>Торцы, схема отверстий и допуски</span></li><li><strong>Сборка и приёмка</strong><span>Комплектность и геометрия корпуса</span></li></ol>
+            </div>
+          </article>
+          <article class="tech-card" id="clothing">
+            <figure class="industry-scene">
+              <img src="clothing.jpg" width="900" height="600" loading="lazy" alt="Швеи работают над деталями одежды в цехе">
+            </figure>
+            <div class="tech-details">
+              <header>
+                <div class="tech-header"><span>Пример технологической карты</span><span>ШВЕЙНЫЙ ЦЕХ</span></div>
+                <h3>Партия рабочих курток</h3><p class="materials">Ткань · подкладка · молнии</p>
+              </header>
+              <ol><li><strong>Настил и раскрой</strong><span>Лекала, размеры и расход ткани</span></li><li><strong>Пошив</strong><span>Последовательность швов и установка фурнитуры</span></li><li><strong>Приёмка и упаковка</strong><span>Проверка швов, размеров и маркировки</span></li></ol>
+            </div>
+          </article>
+          <article class="tech-card" id="assembly">
+            <figure class="industry-scene">
+              <img src="assembly.jpg" width="900" height="600" loading="lazy" alt="Специалисты собирают шкафы управления">
+            </figure>
+            <div class="tech-details">
+              <header>
+                <div class="tech-header"><span>Пример технологической карты</span><span>СБОРКА</span></div>
+                <h3>Шкаф управления</h3><p class="materials">Корпус · клеммы · проводка</p>
+              </header>
+              <ol><li><strong>Комплектация</strong><span>Перечень деталей и проверка наличия</span></li><li><strong>Монтаж</strong><span>Расположение компонентов и схема подключения</span></li><li><strong>Испытания и приёмка</strong><span>Проверка соединений и протокол испытаний</span></li></ol>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="section-seam seam-out" aria-hidden="true"></div>
+    </section>
+    <section class="implementation" id="implementation">
+      <div class="wrap section implementation-layout">
+        <div class="implementation-intro">
+          <p class="eyebrow"><i></i> Внедрение</p>
+          <h2>От первого участка<br><em>до всей фабрики</em></h2>
+          <p>Начинаем с одного потока заказов и расширяем систему после проверки в цехе.</p>
+        </div>
+        <ol class="steps">
+          <li><h3>Разбираем процессы</h3><p>Проходим путь заказа вместе с технологом и мастером, изучаем документы и находим места, где теряются данные или время.</p></li>
+          <li><h3>Настраиваем пилот</h3><p>Выбираем изделие или участок, переносим технологическую карту, настраиваем задания и учёт материалов.</p></li>
+          <li><h3>Запускаем и расширяем</h3><p>Проверяем работу на реальных заказах, обучаем команду и подключаем остальные участки и нужные интеграции.</p></li>
+        </ol>
+      </div>
+    </section>
+    <section class="contact-section" id="contact">
+      <div class="wrap contact">
+        <div>
+          <h2>С какого процесса<br><em>начнём?</em></h2>
+          <p>Опишите, что вы выпускаете и какой процесс хотите автоматизировать первым. Из ответов соберём короткий бриф для обсуждения.</p>
+        </div>
+        <form id="brief-form" hidden>
+          <label for="product">Что вы производите?</label>
+          <input id="product" name="product" required maxlength="120" placeholder="Например, корпусную мебель">
+          <label for="process">С чего хотите начать?</label>
+          <textarea id="process" name="process" required maxlength="1500" rows="3" placeholder="Например, хотим выдавать задания цеху по технологическим картам"></textarea>
+          <button class="button button-primary" type="submit">Собрать бриф <span aria-hidden="true">↗</span></button>
+          <p class="form-note">После заполнения можно скопировать или скачать бриф.</p>
+          <div id="brief-result" hidden>
+            <label for="brief-text">Готовый бриф</label>
+            <textarea id="brief-text" rows="6" readonly></textarea>
+            <div class="brief-actions"><button class="button button-outline" id="copy-brief" type="button">Скопировать</button><button class="button button-outline" id="download-brief" type="button">Скачать .txt</button></div>
+            <p class="form-status" id="form-status" role="status"></p>
+          </div>
+        </form>
+        <noscript><p>Для подготовки брифа включите JavaScript в браузере.</p></noscript>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap footer">
+    <a class="brand" href="#top"><img src="mark.svg" width="34" height="34" alt="">Стандарт‑Н</a>
+    <a href="#top">Наверх ↑</a>
+  </footer>
+</body>
+</html>
