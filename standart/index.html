@@ -8,8 +8,8 @@
 <meta name="description" content="Программы для автоматизации магазинов, аптек и торговых сетей. Касса, товарный учёт, закупки и управление сетью.">
 <link rel="canonical" href="https://aleksnick.github.io/standart/">
 <link rel="icon" href="/standart/assets/favicon.png" sizes="32x32" type="image/png">
-<link rel="stylesheet" href="/standart/assets/site.css">
-<script defer src="/standart/assets/site.js"></script>
+<link rel="stylesheet" href="/standart/assets/site.css?v=scenarios">
+<script defer src="/standart/assets/site.js?v=scenarios"></script>
 </head>
 <body>
 <a class="skip" href="#main">К содержанию</a>
@@ -21,36 +21,92 @@
 </div></header>
 <main id="main">
 <section class="hero"><div class="wrap hero-inner">
-<div class="hero-copy"><p class="eyebrow"><i></i>Программы для магазинов, аптек и торговых сетей</p>
-<h1>Автоматизация <em>розничной торговли</em></h1>
-<p>Касса, товарный учёт, закупки и управление сетью. Подберём конфигурацию под вашу отрасль, настроим оборудование и обучим сотрудников.</p>
-<div class="actions"><a href="/standart/konfiguracii/" class="button">Подобрать решение<span aria-hidden="true">↗</span></a><a href="/standart/demo-versiya/" class="button button-outline">Запросить демо<span aria-hidden="true">↗</span></a></div>
-</div>
-<figure class="hero-photo"><img src="/standart/assets/pharmacy.jpg" alt="Провизор сканирует товар на кассе в аптеке" width="1440" height="1080" fetchpriority="high"><a href="/standart/apteka/" class="photo-link">Решения для аптек <span aria-hidden="true">↗</span></a></figure>
+  <div class="hero-copy">
+    <p class="eyebrow"><i></i>Автоматизация магазинов, аптек и торговых сетей</p>
+    <h1>Касса и учёт <em>в одной системе</em></h1>
+    <p>Продажа на кассе сразу меняет остаток. Товаровед видит, что нужно заказать, а руководитель — как работают точки. Подберём программы и настроим их под ваш магазин.</p>
+    <div class="actions">
+      <a href="https://standart-n.ru/ostavit-zayavku" class="button">Запросить демо<span aria-hidden="true">↗</span></a>
+      <a href="#solutions" class="textlink">Выбрать свою отрасль<span aria-hidden="true">↓</span></a>
+    </div>
+  </div>
+  <div class="showroom" aria-label="Сценарии работы" data-showroom>
+    <div class="showroom-controls" role="group" aria-label="Выбрать сценарий" hidden>
+      <button type="button" aria-controls="scene-till" aria-pressed="true">Касса</button>
+      <button type="button" aria-controls="scene-stock" aria-pressed="false">Склад</button>
+      <button type="button" aria-controls="scene-office" aria-pressed="false">Офис сети</button>
+    </div>
+    <figure class="showroom-scene" id="scene-till">
+      <img src="/standart/assets/pharmacy.jpg" alt="Провизор сканирует товар на кассе в аптеке" width="1440" height="1080" fetchpriority="high">
+      <figcaption>
+        <span class="scene-caption"><small>АРМ Кассир</small><strong>После чека остаток обновляется</strong></span>
+        <a href="/standart/arm-kassir/" aria-label="Подробнее об АРМ Кассир">↗</a>
+      </figcaption>
+    </figure>
+    <figure class="showroom-scene" id="scene-stock" hidden>
+      <img src="/standart/assets/stock.jpg" alt="Сотрудник сканирует товар на складе магазина" width="1200" height="800" loading="lazy">
+      <figcaption>
+        <span class="scene-caption"><small>АРМ Менеджер</small><strong>Приёмка отражается в остатках</strong></span>
+        <a href="/standart/arm-menedzher/" aria-label="Подробнее об АРМ Менеджер">↗</a>
+      </figcaption>
+    </figure>
+    <figure class="showroom-scene" id="scene-office" hidden>
+      <img src="/standart/assets/office.jpg" alt="Руководитель и коллега смотрят данные торговой сети на мониторе" width="1200" height="900" loading="lazy">
+      <figcaption>
+        <span class="scene-caption"><small>Сводный менеджер</small><strong>Показатели всех точек в одном месте</strong></span>
+        <a href="/standart/svodnyy-menedzher/" aria-label="Подробнее о Сводном менеджере">↗</a>
+      </figcaption>
+    </figure>
+  </div>
 </div></section>
 <section class="facts"><div class="wrap"><dl>
 <div><dt>с 2002 года</dt><dd>разрабатываем программы</dd></div>
 <div><dt>8 000+</dt><dd>автоматизаций</dd></div>
 <div><dt>1 500+</dt><dd>клиентов в России и Казахстане</dd></div>
 </dl></div></section>
-<section class="section" id="solutions"><div class="wrap">
-<div class="section-head"><div><p class="eyebrow"><i></i>Отраслевые решения</p><h2>Что вы <em>автоматизируете?</em></h2></div><p>В каталоге есть решения для одной торговой точки и для сети с общим складом и офисом.</p></div>
-<div class="home-directory">
-<a class="sector sector-blue" href="/standart/konfiguracii/?sector=medical"><span class="sector-symbol symbol-med" aria-hidden="true"></span><h3>Аптеки и медицина</h3><p>Лекарства, маркировка, остатки и касса.</p><span class="sector-arrow" aria-hidden="true">↗</span></a>
-<a class="sector sector-light" href="/standart/produktovyy-magazin-uchyot-alkogolya/"><span class="sector-symbol symbol-retail" aria-hidden="true"></span><h3>Продуктовые магазины</h3><p>Продажи, электронные накладные и учёт алкоголя.</p><span class="sector-arrow" aria-hidden="true">↗</span></a>
-<a class="sector sector-neutral" href="/standart/konfiguracii/?sector=special"><span class="sector-symbol symbol-special" aria-hidden="true"></span><h3>Специализированная розница</h3><p>От зоотоваров и запчастей до электроники и стройматериалов.</p><span class="sector-arrow" aria-hidden="true">↗</span></a>
-</div><div class="section-action"><a href="/standart/konfiguracii/" class="textlink">Смотреть все отрасли<span aria-hidden="true">↗</span></a></div>
+<section class="section" id="solutions"><div class="wrap solutions-layout">
+  <div>
+    <p class="eyebrow"><i></i>Отраслевые решения</p>
+    <h2>Какой у вас <em>бизнес?</em></h2>
+    <p>Подберём конфигурацию для одной точки или сети с центральным складом.</p>
+    <a href="/standart/konfiguracii/" class="textlink">Все отрасли<span aria-hidden="true">↗</span></a>
+  </div>
+  <div class="sector-list">
+    <a class="sector" href="/standart/konfiguracii/?sector=medical">
+      <span class="sector-symbol symbol-med" aria-hidden="true"></span>
+      <span><strong>Аптека или клиника</strong><small>Остатки лекарств, справочники и учёт маркировки.</small></span>
+      <span class="row-arrow" aria-hidden="true">↗</span>
+    </a>
+    <a class="sector" href="/standart/produktovyy-magazin-uchyot-alkogolya/">
+      <span class="sector-symbol symbol-retail" aria-hidden="true"></span>
+      <span><strong>Продуктовый магазин</strong><small>Касса, электронные накладные и работа с ЕГАИС.</small></span>
+      <span class="row-arrow" aria-hidden="true">↗</span>
+    </a>
+    <a class="sector" href="/standart/konfiguracii/?sector=special">
+      <span class="sector-symbol symbol-special" aria-hidden="true"></span>
+      <span><strong>Специализированный магазин</strong><small>Поиск по ассортименту, учёт остатков и закупки.</small></span>
+      <span class="row-arrow" aria-hidden="true">↗</span>
+    </a>
+  </div>
 </div></section>
-<section class="section operations"><div class="wrap operations-layout">
-<figure><img src="/standart/assets/stock.jpg" alt="Сотрудник сканирует товар на складе магазина" width="1200" height="800" loading="lazy"></figure>
-<div><p class="eyebrow"><i></i>Программы</p><h2>От кассы <em>до склада</em></h2><p>У каждого сотрудника свой набор инструментов. Данные о продажах и остатках доступны тем, кто принимает решения в точке или офисе.</p>
-<div class="list compact"><a class="list-row" href="/standart/arm-kassir/" ><span><strong>АРМ Кассир</strong><small>Касса и работа с покупателями.</small></span><span class="row-arrow" aria-hidden="true">↗</span></a><a class="list-row" href="/standart/arm-menedzher/" ><span><strong>АРМ Менеджер</strong><small>Товарный учёт и управление запасами.</small></span><span class="row-arrow" aria-hidden="true">↗</span></a><a class="list-row" href="/standart/svodnyy-menedzher/" ><span><strong>Сводный менеджер</strong><small>Аналитика по всей сети.</small></span><span class="row-arrow" aria-hidden="true">↗</span></a></div><a href="/standart/programmy/" class="textlink">Все программы<span aria-hidden="true">↗</span></a></div>
+<section class="section launch"><div class="wrap launch-layout">
+  <div class="launch-copy">
+    <p class="eyebrow"><i></i>Подключение</p>
+    <h2>От демо <em>до запуска</em></h2>
+    <p>На демо можно показать, как сейчас работает ваша точка, и пройти знакомый сценарий в программе.</p>
+    <a href="https://standart-n.ru/ostavit-zayavku" class="button">Запросить демо<span aria-hidden="true">↗</span></a>
+  </div>
+  <ol class="launch-steps">
+    <li><h3>Покажем программу</h3><p>Пройдём нужные операции, например от приёмки товара до чека.</p></li>
+    <li><h3>Подберём конфигурацию</h3><p>Учтём ассортимент, количество точек и оборудование, которое у вас уже есть.</p></li>
+    <li><h3>Настроим и обучим</h3><p>Поможем запустить кассу и учёт. После запуска можно обращаться в поддержку.</p></li>
+  </ol>
 </div></section>
 <section class="section"><div class="wrap">
 <div class="section-head"><div><p class="eyebrow"><i></i>Блог</p><h2>Обновления <em>и инструкции</em></h2></div><a href="/standart/news/" class="textlink">Все публикации<span aria-hidden="true">↗</span></a></div>
 <div class="list news-preview"><a class="list-row" href="https://standart-n.ru/news/obnovlenie-po-arm-kassir-dlya-raboty-s-ts-piot" ><span><strong>Обновление ПО АРМ Кассир для работы с ТС ПИоТ</strong><small>06/05/26</small></span><span class="row-arrow" aria-hidden="true">↗</span></a><a class="list-row" href="https://standart-n.ru/news/v-blizhayshee-vremya-nasha-programma-poyavitsya-v-kalkulyatore-resheniy-crpt-chestnyy-znak" ><span><strong>В ближайшее время наша программа появиться в «Калькуляторе Решений» ЦРПТ «Честный Знак»!</strong><small>20/04/26</small></span><span class="row-arrow" aria-hidden="true">↗</span></a><a class="list-row" href="https://standart-n.ru/video/tak-ii-iskusstvennyy-intellekt-vidit-instrukcii-k-nashey-programme" ><span><strong>Так ИИ (искусственный интеллект) видит инструкции к нашей программе</strong><small>04/12/25</small></span><span class="row-arrow" aria-hidden="true">↗</span></a></div>
 </div></section>
-<section class="section"><div class="wrap"><div class="inquiry"><div><h2>Покажем, как это работает</h2><p>Расскажите о вашей отрасли и текущем учёте. Поможем подобрать конфигурацию и покажем программу в работе.</p></div><div class="actions"><a href="/standart/demo-versiya/" class="button">Запросить демо<span aria-hidden="true">↗</span></a><a class="textlink" href="tel:+78002508238">8 800 250‑82‑38 <span aria-hidden="true">↗</span></a></div></div></div></section>
+<section class="section"><div class="wrap"><div class="inquiry"><div><h2>Покажем на вашем примере</h2><p>Расскажите, где сейчас ведёте учёт и что хотите упростить. Подготовим демонстрацию на примере вашей задачи.</p></div><div class="actions"><a href="https://standart-n.ru/ostavit-zayavku" class="button">Запросить демо<span aria-hidden="true">↗</span></a><a class="textlink" href="tel:+78002508238">8 800 250‑82‑38 <span aria-hidden="true">↗</span></a></div></div></div></section>
 </main>
 <footer class="footer">
 <div class="wrap footer-main">

@@ -11,6 +11,24 @@ document.addEventListener("click", (event) => {
   if (mobileMenu.open && !mobileMenu.contains(event.target)) mobileMenu.open = false;
 });
 
+const showroom = document.querySelector("[data-showroom]");
+
+if (showroom) {
+  const controls = showroom.querySelector(".showroom-controls");
+  const buttons = Array.from(controls.querySelectorAll("button"));
+  const panels = buttons.map((button) => document.getElementById(button.getAttribute("aria-controls")));
+
+  buttons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      buttons.forEach((control, current) => {
+        control.setAttribute("aria-pressed", String(current === index));
+        panels[current].hidden = current !== index;
+      });
+    });
+  });
+  controls.hidden = false;
+}
+
 const directory = document.querySelector("[data-directory]");
 
 if (directory) {
@@ -82,5 +100,5 @@ if ("IntersectionObserver" in window && !reducedMotion.matches) {
     });
   }, { threshold: .17 });
 
-  document.querySelectorAll(".section-head, .operations-layout > *, .inquiry").forEach((item) => entrances.observe(item));
+  document.querySelectorAll(".section-head, .solutions-layout > *, .launch-layout > *, .program-group, .inquiry").forEach((item) => entrances.observe(item));
 }
