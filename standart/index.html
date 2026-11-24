@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#142952">
-<title>Автоматизация торговых точек | Стандарт-Н</title>
-<meta name="description" content="Автоматизация торговых точек, аптек и сетей. Как учёт остатков, контроль сроков и автозаказ помогают сократить потери.">
+<title>Автоматизация торговых и аптечных сетей | Стандарт-Н</title>
+<meta name="description" content="Автоматизация торговых и аптечных сетей. Продажи и остатки по каждой точке, закупки и сводные отчёты в центральном офисе.">
 <link rel="canonical" href="https://aleksnick.github.io/standart/">
 <link rel="icon" href="/standart/assets/favicon.png" sizes="32x32" type="image/png">
 <link rel="stylesheet" href="/standart/assets/site.css?v=editorial-layouts">
-<link rel="stylesheet" href="/standart/assets/storefront.css?v=2">
+<link rel="stylesheet" href="/standart/assets/storefront.css?v=3">
 <script defer src="/standart/assets/site.js?v=migration"></script>
 <script defer src="/standart/assets/retail-losses.js?v=1"></script>
 </head>
@@ -24,28 +24,34 @@
 <main id="main">
 <section class="loss-hero" aria-labelledby="loss-title">
   <div class="wrap loss-hero-copy">
-    <p class="eyebrow"><i></i>Автоматизация торговых точек, аптек и сетей</p>
-    <h1 id="loss-title">Где торговая точка <em>теряет деньги?</em></h1>
-    <p class="loss-lead">Ходовой товар закончился. У партии истекает срок годности. По учёту товар есть, а на полке его нет. Посмотрите, как обнаружить эти потери раньше.</p>
+    <p class="eyebrow"><i></i>Автоматизация торговых и аптечных сетей</p>
+    <h1 id="loss-title">Где ваша сеть <em>теряет деньги?</em></h1>
+    <p class="loss-lead">В одной точке товар закончился, в другой лежит излишек. Соберите данные по всем точкам, чтобы офис мог вовремя пополнить запас, скорректировать закупки и найти расхождения.</p>
     <div class="actions">
-      <a href="#losses" class="button">Разобрать три ситуации<span aria-hidden="true">↓</span></a>
+      <a href="#losses" class="button">Разобрать потери сети<span aria-hidden="true">↓</span></a>
       <a href="/standart/demo-versiya/" class="textlink">Запросить демо<span aria-hidden="true">↗</span></a>
     </div>
   </div>
   <div class="loss-hero-visual">
     <img src="/standart/assets/retail-loss-floor.jpg" alt="" width="1536" height="1024" fetchpriority="high">
-    <nav aria-label="Посмотреть источники потерь" class="loss-hotspots">
-      <a href="#shortage"><span>01</span><strong>Пустая полка</strong></a>
-      <a href="#expiry"><span>02</span><strong>Срок годности</strong></a>
-      <a href="#mismatch"><span>03</span><strong>Расхождения в учёте</strong></a>
-    </nav>
+    <div class="loss-network">
+      <div class="loss-network-office">
+        <strong>Центральный офис</strong>
+        <span>Продажи и остатки всех точек</span>
+      </div>
+      <nav aria-label="Посмотреть источники потерь" class="loss-hotspots">
+        <a href="#shortage"><span>01</span><strong>Дефицит в точке</strong></a>
+        <a href="#expiry"><span>02</span><strong>Избыток запасов</strong></a>
+        <a href="#mismatch"><span>03</span><strong>Расхождения в учёте</strong></a>
+      </nav>
+    </div>
   </div>
 </section>
 <section class="loss-walk" aria-labelledby="losses">
   <div class="wrap">
     <div class="loss-walk-intro">
-      <p class="eyebrow"><i></i>Три источника потерь</p>
-      <h2 id="losses">Что происходит <em>с деньгами</em></h2>
+      <p class="eyebrow"><i></i>Экономика сети</p>
+      <h2 id="losses">Где сеть <em>может сократить потери</em></h2>
     </div>
     <div class="loss-walk-layout">
       <figure class="loss-view" data-loss-view aria-hidden="true">
@@ -55,33 +61,33 @@
       <div class="loss-stories">
         <article class="loss-story" id="shortage" aria-labelledby="shortage-title">
           <p class="loss-story-label">01 <span>Упущенные продажи</span></p>
-          <h3 id="shortage-title">Полка пустая</h3>
-          <p>Покупатель пришёл за ходовой позицией, а последнюю упаковку уже продали. Пока товар не пополнен, точка теряет возможность продать его.</p>
+          <h3 id="shortage-title">В одной точке ходовой товар закончился</h3>
+          <p>Общий остаток по сети может выглядеть достаточным, хотя в конкретной точке товар уже закончился. Пока она ждёт поставку, сеть теряет продажи.</p>
           <dl>
-            <div><dt>Что меняет автоматизация</dt><dd>Автозаказ учитывает продажи и текущие остатки. Товаровед видит, какие позиции пора включить в заказ поставщику.</dd></div>
-            <div><dt>Где экономический эффект</dt><dd>Меньше пропущенных продаж из-за отсутствия товара на полке.</dd></div>
+            <div><dt>Что меняет автоматизация</dt><dd>Офис видит остатки по точкам в Сводном менеджере. Если запас есть в другом подразделении, можно рассмотреть перемещение. Для заказа поставщику автозаказ учитывает продажи и текущие остатки.</dd></div>
+            <div><dt>Где экономический эффект</dt><dd>Ходовая позиция быстрее возвращается на полку, и сеть реже упускает продажи из-за дефицита.</dd></div>
           </dl>
           <a class="textlink" href="/standart/news/zakaz-tovara-avtozakaz/">Как работает автозаказ<span aria-hidden="true">↗</span></a>
         </article>
         <article class="loss-story" id="expiry" aria-labelledby="expiry-title">
-          <p class="loss-story-label">02 <span>Списания</span></p>
-          <h3 id="expiry-title">Срок партии подходит к концу</h3>
-          <p>Партия всё ещё в наличии. Если заметить её после истечения срока, товар придётся снять с продажи и списать.</p>
+          <p class="loss-story-label">02 <span>Деньги в запасах</span></p>
+          <h3 id="expiry-title">Запас есть, но он почти не продаётся</h3>
+          <p>Одну и ту же позицию точки продают с разной скоростью. Если закупать по одинаковой схеме, часть денег остаётся в медленно оборачиваемом товаре, а у некоторых партий истекает срок.</p>
           <dl>
-            <div><dt>Что меняет автоматизация</dt><dd>Фильтр в АРМ Менеджер показывает партии с истекающим сроком годности. Сотрудник может заранее проверить полку и выставить эту партию первой.</dd></div>
-            <div><dt>Где экономический эффект</dt><dd>Больше шансов продать товар в срок и избежать списания.</dd></div>
+            <div><dt>Что меняет автоматизация</dt><dd>Офис сопоставляет продажи и остатки по точкам и корректирует следующие закупки. На месте сотрудники могут отдельно проверить партии с истекающим сроком годности в АРМ Менеджер.</dd></div>
+            <div><dt>Где экономический эффект</dt><dd>Меньше денег уходит в лишний запас, а партии с коротким сроком можно заметить до списания.</dd></div>
           </dl>
           <a class="textlink" href="/standart/arm-menedzher/">Возможности АРМ Менеджер<span aria-hidden="true">↗</span></a>
         </article>
         <article class="loss-story" id="mismatch" aria-labelledby="mismatch-title">
-          <p class="loss-story-label">03 <span>Ошибки в остатках</span></p>
-          <h3 id="mismatch-title">В учёте товар есть. На полке его нет</h3>
-          <p>Если закупки ориентируются на неверный остаток, товара можно заказать слишком мало или слишком много.</p>
+          <p class="loss-story-label">03 <span>Время на сверку</span></p>
+          <h3 id="mismatch-title">Отчёты точек приходится сводить вручную</h3>
+          <p>Пока офис собирает выгрузки, продажи и остатки успевают измениться. На сверку уходит время, а расхождение может обнаружиться уже после заказа.</p>
           <dl>
-            <div><dt>Что меняет автоматизация</dt><dd>Товаровед сверяет фактическое количество с данными учёта при инвентаризации и корректирует выявленные расхождения.</dd></div>
-            <div><dt>Где экономический эффект</dt><dd>Меньше лишних закупок и меньше риска, что нужный товар вовремя не закажут.</dd></div>
+            <div><dt>Что меняет автоматизация</dt><dd>Сводный менеджер синхронизирует данные розничных точек и формирует отчёты по сети. Физический остаток при расхождении проверяют на месте инвентаризацией.</dd></div>
+            <div><dt>Где экономический эффект</dt><dd>Меньше ручных выгрузок и быстрее понятно, в какой точке нужно проверить остаток.</dd></div>
           </dl>
-          <a class="textlink" href="/standart/arm-menedzher/">Как устроен товарный учёт<span aria-hidden="true">↗</span></a>
+          <a class="textlink" href="/standart/svodnyy-menedzher/">Как устроены сводные отчёты<span aria-hidden="true">↗</span></a>
         </article>
       </div>
     </div>
@@ -92,6 +98,28 @@
 <div><dt>8 000+</dt><dd>автоматизаций</dd></div>
 <div><dt>1 500+</dt><dd>клиентов в России и Казахстане</dd></div>
 </dl></div></section>
+<section class="section home-programs"><div class="wrap">
+  <div class="section-head"><div><p class="eyebrow"><i></i>Программы</p><h2>Офис, товарный учёт <em>и кассы сети</em></h2></div>
+    <a href="/standart/programmy/" class="textlink">Все программы<span aria-hidden="true">↗</span></a>
+  </div>
+  <div class="home-workbench">
+<a class="content-card" href="/standart/svodnyy-menedzher/">
+  <span class="card-media"><img src="/standart/assets/network-manager.jpg" width="900" height="600" loading="lazy" alt=""></span>
+  <div class="card-copy"><strong>Сводный менеджер</strong><p>Продажи, остатки и сводные отчёты для руководителя сети.</p></div>
+  <span class="card-arrow" aria-hidden="true">↗</span>
+</a>
+<a class="content-card" href="/standart/arm-menedzher/">
+  <span class="card-media"><img src="/standart/assets/warehouse-cover.jpg" width="900" height="600" loading="lazy" alt=""></span>
+  <div class="card-copy"><strong>АРМ Менеджер</strong><p>Приёмка, перемещения, контроль сроков и инвентаризация.</p></div>
+  <span class="card-arrow" aria-hidden="true">↗</span>
+</a>
+<a class="content-card" href="/standart/arm-kassir/">
+  <span class="card-media"><img src="/standart/assets/pharmacy-cover.jpg" width="900" height="600" loading="lazy" alt=""></span>
+  <div class="card-copy"><strong>АРМ Кассир</strong><p>Продажи и возвраты на кассах каждой точки.</p></div>
+  <span class="card-arrow" aria-hidden="true">↗</span>
+</a>
+</div>
+</div></section>
 <section class="section" id="solutions"><div class="wrap">
   <div class="section-head"><div><p class="eyebrow"><i></i>Отраслевые решения</p><h2>Какой у вас <em>бизнес?</em></h2></div>
     <a href="/standart/konfiguracii/" class="textlink">Все отрасли<span aria-hidden="true">↗</span></a>
@@ -114,39 +142,17 @@
 </a>
   </div>
 </div></section>
-<section class="section home-programs"><div class="wrap">
-  <div class="section-head"><div><p class="eyebrow"><i></i>Программы</p><h2>От кассы <em>до офиса сети</em></h2></div>
-    <a href="/standart/programmy/" class="textlink">Все программы<span aria-hidden="true">↗</span></a>
-  </div>
-  <div class="home-workbench">
-<a class="content-card" href="/standart/arm-kassir/">
-  <span class="card-media"><img src="/standart/assets/pharmacy-cover.jpg" width="900" height="600" loading="lazy" alt=""></span>
-  <div class="card-copy"><strong>АРМ Кассир</strong><p>Чеки, возвраты и остатки в одной базе.</p></div>
-  <span class="card-arrow" aria-hidden="true">↗</span>
-</a>
-<a class="content-card" href="/standart/arm-menedzher/">
-  <span class="card-media"><img src="/standart/assets/warehouse-cover.jpg" width="900" height="600" loading="lazy" alt=""></span>
-  <div class="card-copy"><strong>АРМ Менеджер</strong><p>Приёмка, переоценка и товарный учёт.</p></div>
-  <span class="card-arrow" aria-hidden="true">↗</span>
-</a>
-<a class="content-card" href="/standart/svodnyy-menedzher/">
-  <span class="card-media"><img src="/standart/assets/network-manager.jpg" width="900" height="600" loading="lazy" alt=""></span>
-  <div class="card-copy"><strong>Сводный менеджер</strong><p>Показатели и отчёты по всем точкам.</p></div>
-  <span class="card-arrow" aria-hidden="true">↗</span>
-</a>
-  </div>
-</div></section>
 <section class="section launch"><div class="wrap launch-layout">
   <div class="launch-copy">
     <p class="eyebrow"><i></i>Подключение</p>
     <h2>От демо <em>до запуска</em></h2>
-    <p>На демо разберём, где ваша торговая точка теряет деньги, и покажем соответствующие операции в программе.</p>
+    <p>На демо разберём работу вашей сети: как точки передают данные, где офис смотрит остатки и как закупки планируют пополнение.</p>
     <a href="/standart/demo-versiya/" class="button">Запросить демо<span aria-hidden="true">↗</span></a>
   </div>
   <ol class="launch-steps">
-    <li><h3>Покажем программу</h3><p>Пройдём нужные операции, например от приёмки товара до чека.</p></li>
-    <li><h3>Подберём конфигурацию</h3><p>Учтём ассортимент, количество точек и оборудование, которое у вас уже есть.</p></li>
-    <li><h3>Настроим и обучим</h3><p>Поможем запустить кассу и учёт. После запуска можно обращаться в поддержку.</p></li>
+    <li><h3>Покажем программу</h3><p>Покажем, как операции в точках отражаются в сводных отчётах офиса.</p></li>
+    <li><h3>Подберём конфигурацию</h3><p>Учтём количество точек, наличие центрального склада и оборудование.</p></li>
+    <li><h3>Настроим и обучим</h3><p>Поможем настроить работу офиса и точек. После запуска можно обращаться в поддержку.</p></li>
   </ol>
 </div></section>
 <section class="section"><div class="wrap">
@@ -169,7 +175,7 @@
 </a>
 </div>
 </div></section>
-<section class="section storefront-close"><div class="wrap"><div class="inquiry"><div><h2>Разберём потери вашей торговой точки</h2><p>Расскажите, где вы чаще сталкиваетесь с потерями. Покажем, как отслеживать эту проблему в вашей работе.</p></div><div class="actions"><a href="/standart/demo-versiya/" class="button">Запросить демо<span aria-hidden="true">↗</span></a><a class="textlink" href="tel:+78002508238">8 800 250‑82‑38 <span aria-hidden="true">↗</span></a></div></div></div></section>
+<section class="section storefront-close"><div class="wrap"><div class="inquiry"><div><h2>Разберём, где ваша сеть теряет деньги</h2><p>Расскажите, сколько у вас точек и как устроены закупки. На демо покажем, что увидит управляющий и какие операции можно автоматизировать.</p></div><div class="actions"><a href="/standart/demo-versiya/" class="button">Запросить демо<span aria-hidden="true">↗</span></a><a class="textlink" href="tel:+78002508238">8 800 250‑82‑38 <span aria-hidden="true">↗</span></a></div></div></div></section>
 </main>
 <footer class="footer">
 <div class="wrap footer-main">
