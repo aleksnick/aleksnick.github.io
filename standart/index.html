@@ -4,13 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#142952">
-<title>Автоматизация торговли и аптек | Стандарт-Н</title>
-<meta name="description" content="Программы для автоматизации магазинов, аптек и торговых сетей. Касса, товарный учёт, закупки и управление сетью.">
+<title>Автоматизация торговых точек | Стандарт-Н</title>
+<meta name="description" content="Автоматизация торговых точек, аптек и сетей. Как учёт остатков, контроль сроков и автозаказ помогают сократить потери.">
 <link rel="canonical" href="https://aleksnick.github.io/standart/">
 <link rel="icon" href="/standart/assets/favicon.png" sizes="32x32" type="image/png">
 <link rel="stylesheet" href="/standart/assets/site.css?v=editorial-layouts">
-<link rel="stylesheet" href="/standart/assets/storefront.css?v=1">
+<link rel="stylesheet" href="/standart/assets/storefront.css?v=2">
 <script defer src="/standart/assets/site.js?v=migration"></script>
+<script defer src="/standart/assets/retail-losses.js?v=1"></script>
 </head>
 <body class="theme-home storefront">
 <a class="skip" href="#main">К содержанию</a>
@@ -21,45 +22,71 @@
 <details class="mobile-nav"><summary>Меню <i aria-hidden="true"></i></summary><nav aria-label="Основное меню"><a href="/standart/konfiguracii/">Решения</a><a href="/standart/programmy/">Программы</a><a href="/standart/poleznoe/">Поддержка</a><a href="/standart/news/">Блог</a><a href="/standart/kontakty/">Контакты</a><a href="/standart/demo-versiya/">Запросить демо</a></nav></details>
 </div></header>
 <main id="main">
-<section class="hero storefront-hero"><div class="hero-inner">
-  <div class="hero-copy">
-    <p class="eyebrow"><i></i>Автоматизация магазинов, аптек и торговых сетей</p>
-    <h1>Один чек. <em>Вся сеть в курсе.</em></h1>
-    <p>Продажа на кассе сразу меняет остаток. Товаровед видит, что нужно заказать, а руководитель получает данные по всем точкам.</p>
+<section class="loss-hero" aria-labelledby="loss-title">
+  <div class="wrap loss-hero-copy">
+    <p class="eyebrow"><i></i>Автоматизация торговых точек, аптек и сетей</p>
+    <h1 id="loss-title">Где торговая точка <em>теряет деньги?</em></h1>
+    <p class="loss-lead">Ходовой товар закончился. У партии истекает срок годности. По учёту товар есть, а на полке его нет. Посмотрите, как обнаружить эти потери раньше.</p>
     <div class="actions">
-      <a href="/standart/demo-versiya/" class="button">Запросить демо<span aria-hidden="true">↗</span></a>
-      <a href="#solutions" class="textlink">Выбрать свою отрасль<span aria-hidden="true">↓</span></a>
+      <a href="#losses" class="button">Разобрать три ситуации<span aria-hidden="true">↓</span></a>
+      <a href="/standart/demo-versiya/" class="textlink">Запросить демо<span aria-hidden="true">↗</span></a>
     </div>
   </div>
-  <div class="showroom" role="region" aria-label="Как связаны касса, склад и офис" data-showroom>
-    <div class="showroom-controls" role="group" aria-label="Выбрать сценарий" hidden>
-      <button type="button" aria-controls="scene-till" aria-pressed="true"><span aria-hidden="true">01</span> Касса</button>
-      <button type="button" aria-controls="scene-stock" aria-pressed="false"><span aria-hidden="true">02</span> Склад</button>
-      <button type="button" aria-controls="scene-office" aria-pressed="false"><span aria-hidden="true">03</span> Офис сети</button>
-    </div>
-    <figure class="showroom-scene" id="scene-till">
-      <img src="/standart/assets/pharmacy.jpg" alt="Провизор сканирует товар на кассе в аптеке" width="1440" height="1080" fetchpriority="high">
-      <figcaption>
-        <div class="scene-caption"><small>Кассовый чек</small><strong>После чека остаток обновляется</strong><div class="receipt-status"><span>Продажа</span><span>В учёте</span></div><span class="receipt-program">АРМ Кассир</span></div>
-        <a href="/standart/arm-kassir/" aria-label="Подробнее об АРМ Кассир">↗</a>
-      </figcaption>
-    </figure>
-    <figure class="showroom-scene" id="scene-stock" hidden>
-      <img src="/standart/assets/stock.jpg" alt="Сотрудник сканирует товар на складе магазина" width="1200" height="800" loading="lazy">
-      <figcaption>
-        <div class="scene-caption"><small>Приёмка товара</small><strong>Приёмка отражается в остатках</strong><div class="receipt-status"><span>Остатки</span><span>Обновлены</span></div><span class="receipt-program">АРМ Менеджер</span></div>
-        <a href="/standart/arm-menedzher/" aria-label="Подробнее об АРМ Менеджер">↗</a>
-      </figcaption>
-    </figure>
-    <figure class="showroom-scene" id="scene-office" hidden>
-      <img src="/standart/assets/head-office.jpg" alt="Руководитель торговой сети сверяет записи за рабочим столом" width="1200" height="900" loading="lazy">
-      <figcaption>
-        <div class="scene-caption"><small>Сводка по сети</small><strong>Показатели всех точек в одном месте</strong><div class="receipt-status"><span>Данные точек</span><span>Собраны</span></div><span class="receipt-program">Сводный менеджер</span></div>
-        <a href="/standart/svodnyy-menedzher/" aria-label="Подробнее о Сводном менеджере">↗</a>
-      </figcaption>
-    </figure>
+  <div class="loss-hero-visual">
+    <img src="/standart/assets/retail-loss-floor.jpg" alt="" width="1536" height="1024" fetchpriority="high">
+    <nav aria-label="Посмотреть источники потерь" class="loss-hotspots">
+      <a href="#shortage"><span>01</span><strong>Пустая полка</strong></a>
+      <a href="#expiry"><span>02</span><strong>Срок годности</strong></a>
+      <a href="#mismatch"><span>03</span><strong>Расхождения в учёте</strong></a>
+    </nav>
   </div>
-</div></section>
+</section>
+<section class="loss-walk" aria-labelledby="losses">
+  <div class="wrap">
+    <div class="loss-walk-intro">
+      <p class="eyebrow"><i></i>Три источника потерь</p>
+      <h2 id="losses">Что происходит <em>с деньгами</em></h2>
+    </div>
+    <div class="loss-walk-layout">
+      <figure class="loss-view" data-loss-view aria-hidden="true">
+        <div class="loss-view-image"></div>
+        <div class="loss-view-frame"></div>
+      </figure>
+      <div class="loss-stories">
+        <article class="loss-story" id="shortage" aria-labelledby="shortage-title">
+          <p class="loss-story-label">01 <span>Упущенные продажи</span></p>
+          <h3 id="shortage-title">Полка пустая</h3>
+          <p>Покупатель пришёл за ходовой позицией, а последнюю упаковку уже продали. Пока товар не пополнен, точка теряет возможность продать его.</p>
+          <dl>
+            <div><dt>Что меняет автоматизация</dt><dd>Автозаказ учитывает продажи и текущие остатки. Товаровед видит, какие позиции пора включить в заказ поставщику.</dd></div>
+            <div><dt>Где экономический эффект</dt><dd>Меньше пропущенных продаж из-за отсутствия товара на полке.</dd></div>
+          </dl>
+          <a class="textlink" href="/standart/news/zakaz-tovara-avtozakaz/">Как работает автозаказ<span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="loss-story" id="expiry" aria-labelledby="expiry-title">
+          <p class="loss-story-label">02 <span>Списания</span></p>
+          <h3 id="expiry-title">Срок партии подходит к концу</h3>
+          <p>Партия всё ещё в наличии. Если заметить её после истечения срока, товар придётся снять с продажи и списать.</p>
+          <dl>
+            <div><dt>Что меняет автоматизация</dt><dd>Фильтр в АРМ Менеджер показывает партии с истекающим сроком годности. Сотрудник может заранее проверить полку и выставить эту партию первой.</dd></div>
+            <div><dt>Где экономический эффект</dt><dd>Больше шансов продать товар в срок и избежать списания.</dd></div>
+          </dl>
+          <a class="textlink" href="/standart/arm-menedzher/">Возможности АРМ Менеджер<span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="loss-story" id="mismatch" aria-labelledby="mismatch-title">
+          <p class="loss-story-label">03 <span>Ошибки в остатках</span></p>
+          <h3 id="mismatch-title">В учёте товар есть. На полке его нет</h3>
+          <p>Если закупки ориентируются на неверный остаток, товара можно заказать слишком мало или слишком много.</p>
+          <dl>
+            <div><dt>Что меняет автоматизация</dt><dd>Товаровед сверяет фактическое количество с данными учёта при инвентаризации и корректирует выявленные расхождения.</dd></div>
+            <div><dt>Где экономический эффект</dt><dd>Меньше лишних закупок и меньше риска, что нужный товар вовремя не закажут.</dd></div>
+          </dl>
+          <a class="textlink" href="/standart/arm-menedzher/">Как устроен товарный учёт<span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="facts"><div class="wrap"><dl>
 <div><dt>с 2002 года</dt><dd>разрабатываем программы</dd></div>
 <div><dt>8 000+</dt><dd>автоматизаций</dd></div>
@@ -77,12 +104,12 @@
 </a>
 <a class="content-card" href="/standart/produktovyy-magazin-uchyot-alkogolya/">
   <span class="card-media"><img src="/standart/assets/grocery.jpg" width="900" height="600" loading="lazy" alt=""></span>
-  <div class="card-copy"><strong>Продуктовый магазин</strong><p>Касса, электронные накладные и работа с ЕГАИС.</p></div>
+  <div class="card-copy"><strong>Продуктовая торговая точка</strong><p>Касса, электронные накладные и работа с ЕГАИС.</p></div>
   <span class="card-arrow" aria-hidden="true">↗</span>
 </a>
 <a class="content-card" href="/standart/konfiguracii/?sector=special">
   <span class="card-media"><img src="/standart/assets/hardware-assistant.jpg" width="900" height="600" loading="lazy" alt=""></span>
-  <div class="card-copy"><strong>Специализированный магазин</strong><p>Поиск по ассортименту, учёт остатков и закупки.</p></div>
+  <div class="card-copy"><strong>Специализированная торговая точка</strong><p>Поиск по ассортименту, учёт остатков и закупки.</p></div>
   <span class="card-arrow" aria-hidden="true">↗</span>
 </a>
   </div>
@@ -113,7 +140,7 @@
   <div class="launch-copy">
     <p class="eyebrow"><i></i>Подключение</p>
     <h2>От демо <em>до запуска</em></h2>
-    <p>На демо можно показать, как сейчас работает ваша точка, и пройти знакомый сценарий в программе.</p>
+    <p>На демо разберём, где ваша торговая точка теряет деньги, и покажем соответствующие операции в программе.</p>
     <a href="/standart/demo-versiya/" class="button">Запросить демо<span aria-hidden="true">↗</span></a>
   </div>
   <ol class="launch-steps">
@@ -142,7 +169,7 @@
 </a>
 </div>
 </div></section>
-<section class="section storefront-close"><div class="wrap"><div class="inquiry"><div><h2>Покажем на вашем примере</h2><p>Расскажите, где сейчас ведёте учёт и что хотите упростить. Подготовим демонстрацию на примере вашей задачи.</p></div><div class="actions"><a href="/standart/demo-versiya/" class="button">Запросить демо<span aria-hidden="true">↗</span></a><a class="textlink" href="tel:+78002508238">8 800 250‑82‑38 <span aria-hidden="true">↗</span></a></div></div></div></section>
+<section class="section storefront-close"><div class="wrap"><div class="inquiry"><div><h2>Разберём потери вашей торговой точки</h2><p>Расскажите, где вы чаще сталкиваетесь с потерями. Покажем, как отслеживать эту проблему в вашей работе.</p></div><div class="actions"><a href="/standart/demo-versiya/" class="button">Запросить демо<span aria-hidden="true">↗</span></a><a class="textlink" href="tel:+78002508238">8 800 250‑82‑38 <span aria-hidden="true">↗</span></a></div></div></div></section>
 </main>
 <footer class="footer">
 <div class="wrap footer-main">
