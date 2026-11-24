@@ -78,7 +78,7 @@
   z-index: 1;
   top: 50%;
   right: max(32px, calc((100% - 1272px) / 2));
-  width: min(340px, 36%);
+  width: min(350px, 39%);
   transform: translateY(-50%);
 }
 
@@ -186,8 +186,8 @@
 .loss-view:not([data-current]) .loss-view-frame { display: none; }
 
 .loss-view-frame {
-  --frame-x: 36%;
-  --frame-y: 21%;
+  --frame-x: 57%;
+  --frame-y: 63%;
   position: absolute;
   width: 42%;
   height: 28%;
@@ -205,8 +205,9 @@
 }
 .loss-view-frame::before { width: 26px; height: 3px; inset: -2px auto auto -2px; }
 .loss-view-frame::after { width: 3px; height: 26px; inset: -2px auto auto -2px; }
-.loss-view[data-current="expiry"] .loss-view-frame { --frame-x: 57%; --frame-y: 36%; }
-.loss-view[data-current="mismatch"] .loss-view-frame { --frame-x: 48%; --frame-y: 66%; }
+.loss-view[data-current="inventory"] .loss-view-frame { --frame-x: 36%; --frame-y: 25%; }
+.loss-view[data-current="motivation"] .loss-view-frame { --frame-x: 30%; --frame-y: 59%; }
+.loss-view[data-current="loyalty"] .loss-view-frame { --frame-x: 55%; --frame-y: 71%; }
 
 .loss-story {
   display: grid;
@@ -228,10 +229,7 @@
 
 .loss-story-label span { margin-left: 8px; }
 .loss-story h3 { max-width: 18ch; font-size: clamp(28px, 3.3vw, 48px); }
-.loss-story dl { border-left: 2px solid #a2b7df; padding-left: 15px; }
-.loss-story dl > div + div { margin-top: 13px; }
-.loss-story dt { font-weight: 750; }
-.loss-story dd, .loss-story > p:not(.loss-story-label) { color: #384e72; }
+.loss-story > p:not(.loss-story-label) { color: #384e72; }
 
 .storefront .facts { background: #dce8ff; border-bottom-color: #b7c9e9; }
 .storefront .facts dt { font-variant-numeric: tabular-nums; }
@@ -299,7 +297,7 @@
 
   .loss-hero .loss-lead { max-width: 45ch; }
   .loss-hero .actions { margin-top: 17px; }
-  .loss-hero-visual { position: relative; width: 100%; min-height: 280px; aspect-ratio: 1.85; }
+  .loss-hero-visual { position: relative; width: 100%; min-height: 335px; aspect-ratio: 1.85; }
   .loss-hero-visual img { position: absolute; inset: 0; object-position: right 53%; }
   .loss-hero-visual::after { background: linear-gradient(90deg, #1024474a, #10244704 80%); }
   .loss-network { right: 20px; width: min(305px, calc(100% - 40px)); }
@@ -325,5 +323,5 @@
   .loss-hero-copy { padding-block: 32px 25px; }
   .loss-hero h1 { font-size: clamp(42px, 10.6vw, 54px); }
   .loss-hero-visual { aspect-ratio: 1.5; }
-  .loss-network { width: min(240px, calc(100% - 40px)); }
+  .loss-network { width: min(250px, calc(100% - 40px)); }
 }
